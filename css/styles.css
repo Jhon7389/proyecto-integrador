@@ -1,0 +1,1100 @@
+
+/* =========================================
+   JVMA TECH & GAMING
+   HOJA DE ESTILOS PRINCIPAL
+   ========================================= */
+
+
+/* 1. CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-principal: #16c96b;
+    --verde-oscuro: #087f50;
+    --verde-claro: #e9f8ef;
+    --negro: #111b18;
+    --gris: #68736d;
+    --blanco: #ffffff;
+    --fondo: #f7f9f7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+    background-color: var(--blanco);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.contenedor {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* 2. ENCABEZADO */
+
+.encabezado {
+    background-color: var(--blanco);
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    z-index: 10;
+}
+
+.barra-navegacion {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.logo-principal {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.logo-secundario {
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--verde-oscuro);
+    margin-top: 4px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #4d5751;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: var(--verde-oscuro);
+}
+
+.acciones-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.busqueda {
+    background-color: #f3f5f3;
+    border: 1px solid #eeeeee;
+    border-radius: 25px;
+    padding: 9px 15px;
+    font-size: 11px;
+    color: var(--gris);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.busqueda span {
+    font-size: 20px;
+}
+
+.carrito {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* 3. BANNER PRINCIPAL */
+
+.hero {
+    background-color: var(--negro);
+    color: var(--blanco);
+    overflow: hidden;
+}
+
+.hero-contenido {
+    min-height: 410px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-texto {
+    padding: 55px 0;
+}
+
+.etiqueta,
+.subtitulo {
+    color: var(--verde-principal);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.08;
+    margin: 20px 0;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--verde-principal);
+}
+
+.hero-texto p {
+    max-width: 440px;
+    color: #c2cbc5;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 21px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-verde {
+    background-color: var(--verde-principal);
+    color: #092819;
+}
+
+.boton-verde:hover {
+    background-color: #76edaa;
+    transform: translateY(-2px);
+}
+
+.boton-contorno {
+    border: 1px solid #68756d;
+    color: var(--blanco);
+}
+
+.boton-contorno:hover {
+    border-color: var(--verde-principal);
+    color: var(--verde-principal);
+}
+
+.hero-imagen {
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 4. BENEFICIOS */
+
+.beneficios {
+    background-color: var(--verde-claro);
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 22px 0;
+    gap: 25px;
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.beneficio-icono {
+    width: 37px;
+    height: 37px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: var(--blanco);
+    color: var(--verde-oscuro);
+    font-size: 20px;
+}
+
+.beneficio h3 {
+    font-size: 12px;
+}
+
+.beneficio p {
+    color: var(--gris);
+    font-size: 10px;
+}
+
+
+/* 5. SECCIONES GENERALES */
+
+.seccion {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.encabezado-seccion h2 {
+    font-size: clamp(23px, 3vw, 30px);
+    line-height: 1.2;
+    margin-top: 7px;
+    letter-spacing: -0.7px;
+}
+
+.enlace-verde {
+    color: var(--verde-oscuro);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.enlace-verde:hover {
+    text-decoration: underline;
+}
+
+
+/* 6. CATEGORÍAS */
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.categoria {
+    text-align: center;
+}
+
+.categoria-imagen {
+    height: 140px;
+    padding: 10px;
+    background-color: #f1f5f2;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.categoria-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.categoria:hover img {
+    transform: scale(1.06);
+}
+
+.categoria h3 {
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+
+/* 7. PRODUCTOS FAVORITOS */
+
+.favoritos {
+    background-color: #fafcfb;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.producto {
+    background-color: var(--blanco);
+    border: 1px solid #edf0ed;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.producto-imagen {
+    height: 195px;
+    background-color: #f1f5f2;
+    position: relative;
+    padding: 13px;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.producto-etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--verde-principal);
+    color: #092819;
+    font-size: 8px;
+    font-weight: 900;
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+.producto-info {
+    padding: 16px;
+}
+
+.producto-categoria {
+    color: var(--verde-oscuro);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.producto-info h3 {
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.producto-precio {
+    font-size: 17px;
+    font-weight: 900;
+    margin-bottom: 13px;
+}
+
+.boton-producto {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--verde-claro);
+    color: var(--verde-oscuro);
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton-producto:hover {
+    background-color: var(--verde-principal);
+    color: var(--negro);
+}
+
+
+/* 8. COLECCIÓN DESTACADA */
+
+.coleccion {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 45px 0;
+}
+
+.coleccion-contenido {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    align-items: center;
+    gap: 40px;
+}
+
+.coleccion-texto h2 {
+    font-size: clamp(27px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.coleccion-texto h2 span {
+    display: block;
+    color: var(--verde-principal);
+}
+
+.coleccion-texto p {
+    color: #c1c9c3;
+    font-size: 13px;
+    max-width: 450px;
+    margin-bottom: 22px;
+}
+
+.coleccion-imagen {
+    height: 220px;
+    background-color: #e8f2eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.coleccion-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* 9. SUSCRIPCIÓN */
+
+.suscripcion {
+    background-color: var(--verde-claro);
+    padding: 35px 0;
+}
+
+.suscripcion-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.suscripcion h2 {
+    font-size: 19px;
+}
+
+.suscripcion p {
+    font-size: 11px;
+    color: var(--gris);
+}
+
+.formulario-suscripcion {
+    display: flex;
+    gap: 8px;
+    width: 45%;
+}
+
+.formulario-suscripcion input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #dce9df;
+    border-radius: 4px;
+    outline: none;
+}
+
+.formulario-suscripcion input:focus {
+    border-color: var(--verde-oscuro);
+}
+
+.formulario-suscripcion button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--verde-principal);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* 10. PIE DE PÁGINA */
+
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 35px;
+    padding-bottom: 40px;
+}
+
+.logo-footer .logo-principal {
+    color: var(--blanco);
+}
+
+.footer-marca p {
+    color: #aab5ad;
+    font-size: 11px;
+    max-width: 230px;
+    margin-top: 15px;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.footer-columna a,
+.footer-columna p {
+    font-size: 11px;
+    color: #aab5ad;
+}
+
+.footer-columna a:hover {
+    color: var(--verde-principal);
+}
+
+.footer-final {
+    border-top: 1px solid #29342e;
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #9ba69f;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   11. DISEÑO RESPONSIVE
+   ========================================= */
+
+
+/* TABLETS Y PANTALLAS MEDIANAS */
+
+@media (max-width: 900px) {
+
+    .barra-navegacion {
+        flex-wrap: wrap;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .hero-contenido {
+        gap: 20px;
+    }
+
+    .categorias-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coleccion-contenido {
+        grid-template-columns: 1fr 240px;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .barra-navegacion {
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-top: 10px;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .acciones-menu {
+        gap: 8px;
+    }
+
+    .busqueda {
+        display: none;
+    }
+
+    .hero-contenido {
+        grid-template-columns: 1fr;
+        padding-top: 35px;
+        padding-bottom: 30px;
+    }
+
+    .hero-texto {
+        padding: 0;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-imagen {
+        height: 220px;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px 0;
+    }
+
+    .seccion {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .encabezado-seccion {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 12px;
+    }
+
+    .categoria-imagen {
+        height: 125px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .producto-imagen {
+        height: 145px;
+    }
+
+    .producto-info {
+        padding: 11px;
+    }
+
+    .producto-info h3 {
+        font-size: 12px;
+    }
+
+    .producto-precio {
+        font-size: 15px;
+    }
+
+    .coleccion-contenido {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .coleccion-imagen {
+        height: 220px;
+    }
+
+    .suscripcion-contenido {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .formulario-suscripcion {
+        width: 100%;
+    }
+
+    .formulario-suscripcion button {
+        padding: 12px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+    }
+
+    .footer-final {
+        flex-direction: column;
+    }
+
+}
+
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria-imagen {
+        height: 110px;
+    }
+
+}
+
+/* =========================================
+   JVMA TECH & GAMING
+   ESTILOS DE LA PÁGINA DE CATÁLOGO
+   ========================================= */
+
+/* 1. CONTENEDOR Y PRESENTACIÓN */
+
+.catalogo {
+    padding-top: 25px;
+    padding-bottom: 65px;
+}
+
+.migas-pan {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    color: var(--gris);
+    font-size: 11px;
+    margin-bottom: 25px;
+}
+
+.migas-pan a:hover {
+    color: var(--verde-oscuro);
+}
+
+.catalogo-intro {
+    margin-bottom: 30px;
+}
+
+.catalogo-intro h1 {
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.catalogo-intro p {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+
+/* 2. DISTRIBUCIÓN PRINCIPAL */
+
+.catalogo-layout {
+    display: grid;
+    grid-template-columns: 205px minmax(0, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* 3. PANEL DE FILTROS */
+
+.filtros {
+    min-width: 0;
+}
+
+.filtros-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.filtros-titulo h2 {
+    font-size: 16px;
+}
+
+.filtros-titulo a {
+    color: var(--verde-oscuro);
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.grupo-filtro {
+    border: 0;
+    border-bottom: 1px solid #e9eee9;
+    padding: 0 0 18px;
+    margin-bottom: 18px;
+}
+
+.grupo-filtro legend {
+    color: #68736d;
+    font-size: 10px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.opcion-filtro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.opcion-filtro input,
+.opcion-stock input {
+    accent-color: var(--verde-oscuro);
+}
+
+.opcion-filtro.seleccionada {
+    background-color: var(--verde-claro);
+    color: var(--verde-oscuro);
+    font-weight: bold;
+}
+
+.precio-filtro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.precio-filtro input {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 7px;
+    border: 1px solid #e1e8e2;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.opcion-stock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+
+/* 4. TARJETA DE AYUDA */
+
+.ayuda-catalogo {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 16px;
+    border-radius: 6px;
+    margin-top: 25px;
+}
+
+.ayuda-catalogo h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.ayuda-catalogo p {
+    color: #c2cbc5;
+    font-size: 10px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.ayuda-catalogo a {
+    color: var(--verde-principal);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* 5. BUSCADOR Y ORDENAMIENTO */
+
+.zona-productos {
+    min-width: 0;
+}
+
+.herramientas-catalogo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 190px;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.buscador-catalogo input,
+.orden-catalogo select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #e8eee9;
+    border-radius: 5px;
+    background-color: #f5f8f5;
+    color: var(--negro);
+    font-size: 11px;
+}
+
+.buscador-catalogo input:focus,
+.orden-catalogo select:focus {
+    outline: 1px solid var(--verde-oscuro);
+}
+
+.cantidad-productos {
+    color: var(--gris);
+    font-size: 10px;
+    margin-bottom: 12px;
+}
+
+
+/* 6. TARJETAS DEL CATÁLOGO */
+
+.catalogo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.catalogo-grid .producto-imagen {
+    height: 145px;
+    padding: 12px;
+    background-color: #f1f5f2;
+}
+
+.catalogo-grid .producto-info {
+    padding: 12px;
+}
+
+.catalogo-grid .producto-info h3 {
+    min-height: 34px;
+    font-size: 12px;
+}
+
+.catalogo-grid .producto-precio {
+    font-size: 15px;
+}
+
+.mensaje-catalogo {
+    text-align: center;
+    color: #89938c;
+    font-size: 10px;
+    margin-top: 30px;
+}
+
+
+/* 7. TEXTO OCULTO PARA ACCESIBILIDAD */
+
+.texto-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+/* 8. ADAPTACIÓN A TABLETS */
+
+@media (max-width: 900px) {
+
+    .catalogo-layout {
+        grid-template-columns: 175px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .herramientas-catalogo {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* 9. ADAPTACIÓN A CELULARES */
+
+@media (max-width: 600px) {
+
+    .catalogo {
+        padding-top: 20px;
+    }
+
+    .catalogo-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .filtros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .filtros-titulo {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+    }
+
+    .grupo-filtro {
+        margin-bottom: 5px;
+    }
+
+    .ayuda-catalogo {
+        grid-column: 1 / -1;
+        margin-top: 0;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .catalogo-grid .producto-imagen {
+        height: 130px;
+    }
+
+    .catalogo-grid .producto-info {
+        padding: 10px;
+    }
+
+    .catalogo-grid .producto-info h3 {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
