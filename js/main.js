@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    JVMA TECH & GAMING Ã¢â‚¬â€ Estado Compartido (localStorage) y LÃƒÂ³gica de Vistas
    ========================================================================== */
 
@@ -65,30 +65,30 @@
         "image":  "assets/img/productos/goku-ultra-instinto.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published":  true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-vegeta-ed",
-        "name":  "Vegeta EdiciÃ³n Especial",
+        "name":  "Vegeta Edición Especial",
         "sku":  "JV-FIG-002",
         "categorySlug":  "anime-figuras",
         "price":  150,
         "image":  "assets/img/productos/vegeta-edicion-especial.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published":  true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-majin",
@@ -99,13 +99,13 @@
         "image":  "assets/img/productos/majin-vegeta.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published":  true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-gohan-ssj",
@@ -116,30 +116,30 @@
         "image":  "assets/img/productos/gohan-ssj-adulto.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published":  true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-bills",
-        "name":  "Bills Dios de DestrucciÃ³n",
+        "name":  "Bills Dios de Destrucción",
         "sku":  "JV-FIG-005",
         "categorySlug":  "anime-figuras",
         "price":  0,
         "image":  "assets/img/productos/bills-dios-destruccion.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-gohan-bestia",
@@ -150,30 +150,30 @@
         "image":  "assets/img/productos/gohan-bestia.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-goku-black",
-        "name":  "Goku Black RosÃ©",
+        "name":  "Goku Black Rosé",
         "sku":  "JV-FIG-007",
         "categorySlug":  "anime-figuras",
         "price":  0,
         "image":  "assets/img/productos/goku-black-rose.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-goku-blue",
@@ -184,13 +184,13 @@
         "image":  "assets/img/productos/goku-ssj-blue.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-luffy",
@@ -201,13 +201,13 @@
         "image":  "assets/img/productos/luffy-gear-2.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "fig-trunks",
@@ -218,30 +218,30 @@
         "image":  "assets/img/productos/trunks-ssj.jpg",
         "categoryLabel":  "ANIME \u0026 FIGURAS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-audifono",
-        "name":  "AudÃ­fono Gamer Rowell RW-A6 Azul",
+        "name":  "Audífono Gamer Rowell RW-A6 Azul",
         "sku":  "JV-TEC-011",
         "categorySlug":  "accesorios",
         "price":  0,
         "image":  "assets/img/productos/audifono-gamer-rowell-rw-a6-azul.jpg",
         "categoryLabel":  "ACCESORIOS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-cable-a005",
@@ -252,13 +252,13 @@
         "image":  "assets/img/productos/cable-usb-tc-a-005.jpg",
         "categoryLabel":  "ACCESORIOS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-cable-c25",
@@ -269,13 +269,13 @@
         "image":  "assets/img/productos/cable-usb-tc-c-25.jpg",
         "categoryLabel":  "ACCESORIOS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-cable-su",
@@ -286,13 +286,13 @@
         "image":  "assets/img/productos/cable-usb-tc-engomado-su241001.jpg",
         "categoryLabel":  "ACCESORIOS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-cable-f",
@@ -303,13 +303,13 @@
         "image":  "assets/img/productos/cable-usb-tc-f-d003.jpg",
         "categoryLabel":  "ACCESORIOS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-cable-samsung",
@@ -320,13 +320,13 @@
         "image":  "assets/img/productos/cable-usb-tc-samsung-xx241001.jpg",
         "categoryLabel":  "ACCESORIOS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-cable-starksun",
@@ -337,13 +337,13 @@
         "image":  "assets/img/productos/cable-usb-tc-starksun-cz1103.jpg",
         "categoryLabel":  "ACCESORIOS",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-cargador25",
@@ -354,13 +354,13 @@
         "image":  "assets/img/productos/cargador-samsung-25w-s21-5g.jpg",
         "categoryLabel":  "TECNOLOGÃA",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-cargador50",
@@ -371,13 +371,13 @@
         "image":  "assets/img/productos/cargador-samsung-50w-original.jpg",
         "categoryLabel":  "TECNOLOGÃA",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
         "id":  "tec-tablet",
@@ -388,13 +388,13 @@
         "image":  "assets/img/productos/combo-tablet-bossney-s003.jpg",
         "categoryLabel":  "TECNOLOGÃA",
         "currency":  "Bs",
-        "stock":  0,
+        "stock":  10,
         "status":  "Activo",
         "collection":  "general",
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     }
 ];
 
@@ -436,7 +436,7 @@
       offer: Boolean(prod.offer),
       published: prod.published !== false,
       image: String(prod.image || ""),
-      placeholderLabel: String(prod.placeholderLabel || "VISTA PREVIA Ã‚Â· MARKER"),
+      placeholderLabel: String(prod.placeholderLabel || "VISTA PREVIA Ã‚· MARKER"),
       placeholderFile: String(prod.placeholderFile || "./assets/img/producto.png"),
       description: String(prod.description || "")
     };
@@ -1060,10 +1060,10 @@
       addBtn.parentElement.appendChild(waBtn);
     }
 
-    if (catEl) catEl.textContent = `JVMA Ã‚Â· ${product.categoryLabel}`;
+    if (catEl) catEl.textContent = `JVMA Ã‚· ${product.categoryLabel}`;
     if (titleEl) titleEl.textContent = product.name;
     if (subtitleEl) {
-      subtitleEl.textContent = `CategorÃƒÂ­a: ${product.categoryLabel} Ã‚Â· Disponible en JVMA TECH & GAMING`;
+      subtitleEl.textContent = `CategorÃƒÂ­a: ${product.categoryLabel} Ã‚· Disponible en JVMA TECH & GAMING`;
     }
 
     const regularPrice = product.offer ? Math.round(product.price * 1.15) : 0;
@@ -1083,8 +1083,8 @@
     const hasStock = product.stock > 0;
     if (stockEl) {
       stockEl.textContent = hasStock
-        ? `Disponible Ã‚Â· ${product.stock} ${product.stock === 1 ? "unidad en stock" : "unidades en stock"}`
-        : "Agotado Ã‚Â· Sin stock disponible";
+        ? `Disponible Ã‚· ${product.stock} ${product.stock === 1 ? "unidad en stock" : "unidades en stock"}`
+        : "Agotado Ã‚· Sin stock disponible";
       stockEl.classList.toggle("is-out", !hasStock);
     }
 
@@ -1103,7 +1103,7 @@
       if (imgSrc) {
         mainMediaEl.innerHTML = `${badgeHtml}<img class="product-card__img" src="${imgSrc}" alt="${product.name}" />`;
       } else {
-        const suffix = mode === "detalle" ? " Ã‚Â· VISTA 2" : " Ã‚Â· VISTA PRINCIPAL";
+        const suffix = mode === "detalle" ? " Ã‚· VISTA 2" : " Ã‚· VISTA PRINCIPAL";
         mainMediaEl.innerHTML = `
           ${badgeHtml}
           <span class="detail-placeholder-title">${product.placeholderLabel}${suffix}</span>
@@ -1116,8 +1116,8 @@
 
     if (thumbsEl) {
       thumbsEl.innerHTML = `
-        <button class="detail-thumb-btn is-active" type="button" data-view="principal">Vista 1 Ã‚Â· Principal</button>
-        <button class="detail-thumb-btn" type="button" data-view="detalle">Vista 2 Ã‚Â· Detalle</button>
+        <button class="detail-thumb-btn is-active" type="button" data-view="principal">Vista 1 Ã‚· Principal</button>
+        <button class="detail-thumb-btn" type="button" data-view="detalle">Vista 2 Ã‚· Detalle</button>
       `;
       thumbsEl.querySelectorAll(".detail-thumb-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -1344,7 +1344,7 @@
 
               <div>
                 <h3 class="cart-item-title"><a href="${detailHref}">${product.name}</a></h3>
-                <p class="cart-item-meta">${product.categoryLabel} Ã‚Â· Unitario: ${formatPrice(product.price, product.currency)}</p>
+                <p class="cart-item-meta">${product.categoryLabel} Ã‚· Unitario: ${formatPrice(product.price, product.currency)}</p>
                 <p class="cart-item-stock ${exceedsStock || product.stock <= 0 ? "is-warn" : ""}">${stockText}</p>
                 <button class="cart-item-remove" type="button" data-remove-item="${product.id}">Eliminar</button>
               </div>
@@ -1676,7 +1676,7 @@
         const isOut = p.stock <= 0;
         const isLow = !isOut && p.stock <= LOW_STOCK_THRESHOLD;
         const rowCls = isOut ? "is-out-row" : isLow ? "is-low-row" : "";
-        const availLbl = isOut ? "Agotado" : isLow ? "Stock bajo Ã‚Â· Disponible" : "Disponible";
+        const availLbl = isOut ? "Agotado" : isLow ? "Stock bajo Ã‚· Disponible" : "Disponible";
         const pillCls = isOut ? "inv-status-pill--out" : isLow ? "inv-status-pill--low" : "inv-status-pill--ok";
         const pubLbl = p.published === false ? "Oculto" : "Publicado";
 
@@ -1816,7 +1816,7 @@
             : "sales-badge--ok";
 
         const itemsHtml = Array.isArray(sale.items) && sale.items.length > 0
-          ? sale.items.map((it) => `${it.name} <strong>(Ãƒâ€”${it.qty})</strong>`).join(" Ã‚Â· ")
+          ? sale.items.map((it) => `${it.name} <strong>(Ãƒâ€”${it.qty})</strong>`).join(" Ã‚· ")
           : "Sin detalle de ÃƒÂ­tems";
 
         return `
@@ -1884,7 +1884,7 @@
       if (prevTitle) prevTitle.textContent = nameVal;
       if (prevPrice) prevPrice.textContent = formatPrice(priceVal, "Bs");
       if (prevStock) {
-        prevStock.textContent = `Stock: ${stockVal} ${stockVal === 1 ? "unidad" : "unidades"} Ã‚Â· ${pubVal ? "Visible en catÃƒÂ¡logo" : "Oculto"}`;
+        prevStock.textContent = `Stock: ${stockVal} ${stockVal === 1 ? "unidad" : "unidades"} Ã‚· ${pubVal ? "Visible en catÃƒÂ¡logo" : "Oculto"}`;
       }
     }
 
@@ -2064,7 +2064,7 @@
               offer: isOffer,
               published: pubVal,
               image: imgVal,
-              placeholderLabel: `${catLbl} Ã‚Â· JVMA`,
+              placeholderLabel: `${catLbl} Ã‚· JVMA`,
               placeholderFile: "../assets/img/producto.png"
             },
             state.products.length
