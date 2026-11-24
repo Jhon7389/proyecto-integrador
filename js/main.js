@@ -138,7 +138,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -155,7 +155,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -172,7 +172,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -189,7 +189,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -206,7 +206,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -223,7 +223,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -240,7 +240,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -257,7 +257,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -274,7 +274,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -291,7 +291,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -308,7 +308,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -325,7 +325,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -342,7 +342,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -359,7 +359,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -376,7 +376,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     },
     {
@@ -393,7 +393,7 @@
         "collection":  "general",
         "featured":  false,
         "offer":  false,
-        "published":  false,
+        "published": true,
         "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
     }
 ];
