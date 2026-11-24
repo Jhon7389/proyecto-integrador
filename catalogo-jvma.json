@@ -1,0 +1,162 @@
+﻿[
+    {
+        "id":  "fig-goku-ui",
+        "name":  "Goku Ultra Instinto",
+        "sku":  "JV-FIG-001",
+        "categorySlug":  "anime-figuras",
+        "price":  150,
+        "image":  "assets/img/productos/goku-ultra-instinto.jpg"
+    },
+    {
+        "id":  "fig-vegeta-ed",
+        "name":  "Vegeta Edición Especial",
+        "sku":  "JV-FIG-002",
+        "categorySlug":  "anime-figuras",
+        "price":  150,
+        "image":  "assets/img/productos/vegeta-edicion-especial.jpg"
+    },
+    {
+        "id":  "fig-majin",
+        "name":  "Majin Vegeta",
+        "sku":  "JV-FIG-003",
+        "categorySlug":  "anime-figuras",
+        "price":  170,
+        "image":  "assets/img/productos/majin-vegeta.jpg"
+    },
+    {
+        "id":  "fig-gohan-ssj",
+        "name":  "Gohan SSJ Adulto",
+        "sku":  "JV-FIG-004",
+        "categorySlug":  "anime-figuras",
+        "price":  250,
+        "image":  "assets/img/productos/gohan-ssj-adulto.jpg"
+    },
+    {
+        "id":  "fig-bills",
+        "name":  "Bills Dios de Destrucción",
+        "sku":  "JV-FIG-005",
+        "categorySlug":  "anime-figuras",
+        "price":  0,
+        "image":  "assets/img/productos/bills-dios-destruccion.jpg"
+    },
+    {
+        "id":  "fig-gohan-bestia",
+        "name":  "Gohan Bestia",
+        "sku":  "JV-FIG-006",
+        "categorySlug":  "anime-figuras",
+        "price":  0,
+        "image":  "assets/img/productos/gohan-bestia.jpg"
+    },
+    {
+        "id":  "fig-goku-black",
+        "name":  "Goku Black Rosé",
+        "sku":  "JV-FIG-007",
+        "categorySlug":  "anime-figuras",
+        "price":  0,
+        "image":  "assets/img/productos/goku-black-rose.jpg"
+    },
+    {
+        "id":  "fig-goku-blue",
+        "name":  "Goku SSJ Blue",
+        "sku":  "JV-FIG-008",
+        "categorySlug":  "anime-figuras",
+        "price":  0,
+        "image":  "assets/img/productos/goku-ssj-blue.jpg"
+    },
+    {
+        "id":  "fig-luffy",
+        "name":  "Luffy Gear 2",
+        "sku":  "JV-FIG-009",
+        "categorySlug":  "anime-figuras",
+        "price":  0,
+        "image":  "assets/img/productos/luffy-gear-2.jpg"
+    },
+    {
+        "id":  "fig-trunks",
+        "name":  "Trunks SSJ",
+        "sku":  "JV-FIG-010",
+        "categorySlug":  "anime-figuras",
+        "price":  0,
+        "image":  "assets/img/productos/trunks-ssj.jpg"
+    },
+    {
+        "id":  "tec-audifono",
+        "name":  "Audífono Gamer Rowell RW-A6 Azul",
+        "sku":  "JV-TEC-011",
+        "categorySlug":  "accesorios",
+        "price":  0,
+        "image":  "assets/img/productos/audifono-gamer-rowell-rw-a6-azul.jpg"
+    },
+    {
+        "id":  "tec-cable-a005",
+        "name":  "Cable USB TC-A-005",
+        "sku":  "JV-TEC-012",
+        "categorySlug":  "accesorios",
+        "price":  0,
+        "image":  "assets/img/productos/cable-usb-tc-a-005.jpg"
+    },
+    {
+        "id":  "tec-cable-c25",
+        "name":  "Cable USB TC-C-25",
+        "sku":  "JV-TEC-013",
+        "categorySlug":  "accesorios",
+        "price":  0,
+        "image":  "assets/img/productos/cable-usb-tc-c-25.jpg"
+    },
+    {
+        "id":  "tec-cable-su",
+        "name":  "Cable USB engomado SU241001",
+        "sku":  "JV-TEC-014",
+        "categorySlug":  "accesorios",
+        "price":  0,
+        "image":  "assets/img/productos/cable-usb-tc-engomado-su241001.jpg"
+    },
+    {
+        "id":  "tec-cable-f",
+        "name":  "Cable USB TC-F-D003",
+        "sku":  "JV-TEC-015",
+        "categorySlug":  "accesorios",
+        "price":  0,
+        "image":  "assets/img/productos/cable-usb-tc-f-d003.jpg"
+    },
+    {
+        "id":  "tec-cable-samsung",
+        "name":  "Cable USB Samsung",
+        "sku":  "JV-TEC-016",
+        "categorySlug":  "accesorios",
+        "price":  0,
+        "image":  "assets/img/productos/cable-usb-tc-samsung-xx241001.jpg"
+    },
+    {
+        "id":  "tec-cable-starksun",
+        "name":  "Cable USB Starksun CZ1103",
+        "sku":  "JV-TEC-017",
+        "categorySlug":  "accesorios",
+        "price":  0,
+        "image":  "assets/img/productos/cable-usb-tc-starksun-cz1103.jpg"
+    },
+    {
+        "id":  "tec-cargador25",
+        "name":  "Cargador Samsung 25W S21 5G",
+        "sku":  "JV-TEC-018",
+        "categorySlug":  "tecnologia",
+        "price":  0,
+        "image":  "assets/img/productos/cargador-samsung-25w-s21-5g.jpg"
+    },
+    {
+        "id":  "tec-cargador50",
+        "name":  "Cargador Samsung 50W Original",
+        "sku":  "JV-TEC-019",
+        "categorySlug":  "tecnologia",
+        "price":  0,
+        "image":  "assets/img/productos/cargador-samsung-50w-original.jpg"
+    },
+    {
+        "id":  "tec-tablet",
+        "name":  "Combo Tablet Bossney S003",
+        "sku":  "JV-TEC-020",
+        "categorySlug":  "tecnologia",
+        "price":  0,
+        "image":  "assets/img/productos/combo-tablet-bossney-s003.jpg"
+    }
+]
