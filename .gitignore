@@ -1,0 +1,19 @@
+﻿
+# Respaldos locales: no publicar
+*respaldo*.css
+*respaldo*.js
+*respaldo*.html
+JVMA_AVANCE_ACTUAL.zip
+styles_antes_responsive_*.css
+
+# Archivos locales que no forman parte de la entrega
+*respaldo*.html
+*respaldo*.css
+*respaldo*.js
+styles_antes_responsive_*.css
+JVMA_AVANCE_ACTUAL.zip
+REVISION_COMPLETA_JVMA.txt
+
+# Copias de seguridad de la revisión visual
+*antes-imagenes.html
+*antes-imagenes.css

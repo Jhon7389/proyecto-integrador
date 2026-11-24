@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de compras — JVMA TECH &amp; GAMING</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body data-page="carrito">
+  <!-- Barra superior -->
+  <div class="topbar" role="region" aria-label="Aviso de tienda">
+    <div class="container topbar__inner">
+      <p class="topbar__text">TU PRÓXIMO NIVEL EMPIEZA AQUÍ / TECNOLOGÍA Y GAMING EN BOLIVIA</p>
+    </div>
+  </div>
+
+  <!-- Encabezado principal -->
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="../index.html" aria-label="JVMA TECH & GAMING Inicio">
+        <span class="brand__title">JVMA</span>
+        <span class="brand__sub">TECH &amp; GAMING</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="../index.html">Inicio</a>
+        <a class="nav__link" href="./catalogo.html">Catálogo</a>
+        <a class="nav__link" href="./catalogo.html?oferta=1">Ofertas</a>
+        <a class="nav__link" href="./catalogo.html?categoria=anime-figuras">Coleccionables</a>
+      </nav>
+
+      <form class="search-box" id="header-search-form" action="./catalogo.html" method="get" role="search">
+        <span class="search-box__icon" aria-hidden="true">⌕</span>
+        <label class="sr-only" for="header-search-input">Buscar productos</label>
+        <input
+          class="search-box__input"
+          id="header-search-input"
+          name="q"
+          type="search"
+          placeholder="Buscar tu próximo upgrade"
+          autocomplete="off"
+        />
+      </form>
+
+      <a class="cart-pill" id="header-cart-link" href="./carrito.html" aria-label="Ver carrito de compras">
+        <span class="cart-pill__icon" aria-hidden="true">🛒</span>
+        <span class="cart-pill__text">Carrito</span>
+        <span class="cart-pill__sep" aria-hidden="true">·</span>
+        <span class="cart-pill__count" id="header-cart-count">2</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="cart-main">
+    <div class="container">
+      <!-- Migas de pan y cabecera -->
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="../index.html">Inicio</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Carrito</span>
+      </nav>
+
+      <section class="cart-hero" aria-labelledby="cart-heading">
+        <h1 class="cart-hero__title" id="cart-heading">Tu próximo nivel está aquí.</h1>
+        <p class="cart-hero__subtitle">Revisa tu selección antes de coordinar la compra.</p>
+      </section>
+
+      <!-- Confirmación de compra de demostración -->
+      <div class="cart-sale-banner" id="cart-sale-confirmation" role="status" aria-live="polite" hidden></div>
+
+      <!-- Layout principal del carrito -->
+      <div class="cart-layout">
+        <section class="cart-items-col" aria-label="Productos en el carrito">
+          <div class="cart-items-header">
+            <h2 class="cart-items-title">Mi carrito</h2>
+            <div class="cart-items-actions">
+              <span class="cart-items-count" id="cart-items-count">0 productos</span>
+              <button class="cart-clear-btn" id="cart-clear-all-btn" type="button">Vaciar carrito</button>
+            </div>
+          </div>
+
+          <div class="cart-list" id="cart-items-list">
+            <!-- Renderizado dinámico desde js/main.js -->
+          </div>
+
+          <div class="cart-continue-row">
+            <a class="cart-continue-link" href="./catalogo.html">&lt;- Seguir explorando</a>
+          </div>
+        </section>
+
+        <aside class="cart-summary-col" aria-label="Resumen del pedido">
+          <div class="cart-summary-card">
+            <h2 class="cart-summary-title">Resumen del pedido</h2>
+
+            <dl class="cart-summary-rows">
+              <div class="cart-summary-row">
+                <dt>Subtotal</dt>
+                <dd id="cart-subtotal-value">Bs 0</dd>
+              </div>
+              <div class="cart-summary-row">
+                <dt>Entrega</dt>
+                <dd>Por coordinar</dd>
+              </div>
+            </dl>
+
+            <div class="cart-summary-total">
+              <span>Total de productos</span>
+              <strong id="cart-total-value">Bs 0</strong>
+            </div>
+
+            <button class="btn btn--primary cart-checkout-btn" id="cart-checkout-btn" type="button">
+              Finalizar compra <span aria-hidden="true">-&gt;</span>
+            </button>
+
+            <p class="cart-feedback" id="cart-feedback" role="alert" aria-live="polite"></p>
+
+            <p class="cart-summary-note">
+              La entrega se confirma con la tienda.<br />
+              Demostración académica: no se realiza ningún cobro ni se solicitan datos bancarios.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Banner inferior de asesoría -->
+      <section class="cart-advice-banner" aria-label="Asesoría de compra">
+        <h2 class="cart-advice-banner__title">Tu setup merece una buena decisión.</h2>
+        <p class="cart-advice-banner__desc">Consulta compatibilidad, disponibilidad y garantía antes de comprar.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="../index.html">
+          <span class="brand__title">JVMA</span>
+          <span class="brand__sub">TECH &amp; GAMING</span>
+        </a>
+        <p class="footer__tagline">Tecnología que conecta. Gaming que inspira.</p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3 class="footer__heading">Explora</h3>
+          <ul class="footer__list">
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./catalogo.html?categoria=videojuegos">Videojuegos y tecnología</a></li>
+            <li><a href="./catalogo.html?categoria=anime-figuras">Figuras y coleccionables</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Te ayudamos</h3>
+          <ul class="footer__list">
+            <li><a href="./catalogo.html?seccion=envios">Envíos y entregas</a></li>
+            <li><a href="./catalogo.html?seccion=garantia">Cambios y garantía</a></li>
+            <li><a href="./catalogo.html?seccion=faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Conecta con JVMA</h3>
+          <ul class="footer__list">
+            <li><a href="./catalogo.html?seccion=asesoria">Asesoría personalizada</a></li>
+            <li><a href="./catalogo.html?seccion=redes">Síguenos en redes</a></li>
+            <li><a href="./catalogo.html?seccion=torneos">Bolivia · Torneos y drops</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p class="footer__copy">© 2026 JVMA TECH &amp; GAMING. Todos los derechos reservados.</p>
+      <a class="owner-access-link" id="owner-access-trigger" href="./admin.html?login=1">Acceso del propietario</a>
+    </div>
+  </footer>
+
+  <!-- Modal de demostración académica: Acceso del propietario -->
+  <div class="owner-modal" id="owner-login-modal" role="dialog" aria-modal="true" aria-labelledby="owner-modal-title" hidden>
+    <div class="owner-modal__card">
+      <button class="owner-modal__close" id="owner-modal-close" type="button" aria-label="Cerrar ventana">✕</button>
+      <p class="eyebrow eyebrow--green">DEMOSTRACIÓN ACADÉMICA · ÁREA PRIVADA</p>
+      <h2 class="owner-modal__title" id="owner-modal-title">Acceso del propietario</h2>
+      <p class="owner-modal__note">Simulación en navegador con localStorage (no es seguridad real en producción).</p>
+
+      <form class="owner-modal__form" id="owner-login-form" novalidate>
+        <div class="owner-modal__field">
+          <label class="owner-modal__label" for="owner-username">Usuario</label>
+          <input class="owner-modal__input" id="owner-username" name="username" type="text" autocomplete="username" required />
+        </div>
+
+        <div class="owner-modal__field">
+          <label class="owner-modal__label" for="owner-password">Contraseña</label>
+          <input class="owner-modal__input" id="owner-password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+
+        <p class="owner-modal__error" id="owner-login-error" role="alert" aria-live="polite"></p>
+
+        <div class="owner-modal__actions">
+          <button class="btn btn--primary" type="submit">Ingresar al panel</button>
+          <a class="owner-modal__direct" href="./admin.html?login=1">Ir directo a admin.html</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel privado — JVMA TECH &amp; GAMING</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body data-page="admin" data-admin-section="registro">
+  <section class="admin-gate" id="admin-auth-gate" aria-labelledby="admin-gate-title" hidden>
+    <div class="admin-gate__card">
+      <p class="eyebrow eyebrow--green">DEMOSTRACIÓN ACADÉMICA · ÁREA PRIVADA</p>
+      <h1 class="admin-gate__title" id="admin-gate-title">Acceso del propietario</h1>
+      <p class="admin-gate__desc">Ingresa con las credenciales académicas de demostración para gestionar el panel privado.</p>
+      <form class="owner-modal__form" id="admin-gate-form" novalidate>
+        <div class="owner-modal__field">
+          <label class="owner-modal__label" for="admin-gate-user">Usuario</label>
+          <input class="owner-modal__input" id="admin-gate-user" type="text" autocomplete="username" required />
+        </div>
+        <div class="owner-modal__field">
+          <label class="owner-modal__label" for="admin-gate-pass">Contraseña</label>
+          <input class="owner-modal__input" id="admin-gate-pass" type="password" autocomplete="current-password" required />
+        </div>
+        <p class="owner-modal__error" id="admin-gate-error" role="alert" aria-live="polite"></p>
+        <div class="owner-modal__actions">
+          <button class="btn btn--primary" type="submit">Entrar al panel</button>
+          <a class="owner-modal__direct" href="../index.html">&lt;- Volver a Inicio</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <div class="admin-shell" id="admin-shell">
+    <aside class="admin-sidebar" aria-label="Navegación privada">
+      <div>
+        <a class="brand brand--light admin-brand" href="../index.html">
+          <span class="brand__title">JVMA</span>
+          <span class="brand__sub">TECH &amp; GAMING</span>
+        </a>
+        <p class="admin-sidebar__label">ADMINISTRACIÓN</p>
+
+        <nav class="admin-nav" aria-label="Secciones administrativas">
+          <button class="admin-nav__item" type="button" data-admin-tab="inventario">Inventario</button>
+          <button class="admin-nav__item" type="button" data-admin-tab="ventas">Ventas</button>
+          <button class="admin-nav__item is-active" type="button" data-admin-tab="registro">Registro de productos</button>
+        </nav>
+
+        <a class="admin-store-link" href="../index.html">Ver tienda <span aria-hidden="true">-&gt;</span></a>
+      </div>
+
+      <div class="admin-private-box">
+        <span class="admin-private-box__title">ESPACIO PRIVADO</span>
+        <p class="admin-private-box__text">Solo administradores. El inventario y las ventas no son visibles al cliente.</p>
+      </div>
+    </aside>
+
+    <div class="admin-content-wrap">
+      <header class="admin-topbar">
+        <div class="admin-breadcrumb">
+          <a href="../index.html">Inicio</a>
+          <span aria-hidden="true">/</span>
+          <span>Administración</span>
+          <span aria-hidden="true">/</span>
+          <span id="admin-current-crumb">Registro de productos</span>
+        </div>
+        <div class="admin-topbar__right">
+          <span class="admin-badge-role">ACCESO ADMINISTRADOR</span>
+          <button class="admin-logout-btn" id="admin-logout-btn" type="button">Salir</button>
+        </div>
+      </header>
+
+      <main class="admin-main">
+        <!-- SECCIÓN 1: INVENTARIO (PLANTILLA 5) -->
+        <section id="admin-view-inventario" hidden aria-labelledby="inv-heading">
+          <div class="admin-page-head">
+            <div>
+              <h1 class="admin-page-title" id="inv-heading">Inventario</h1>
+              <p class="admin-page-subtitle">Organiza tus productos y mantén el stock bajo control.</p>
+            </div>
+            <button class="btn btn--primary" id="inv-new-product-btn" type="button">+ Nuevo producto</button>
+          </div>
+
+          <div class="inv-kpi-grid" aria-label="Indicadores de inventario">
+            <article class="inv-kpi-card">
+              <span class="inv-kpi-card__label">Total de productos registrados</span>
+              <strong class="inv-kpi-card__value" id="kpi-total-products">0</strong>
+              <span class="inv-kpi-card__meta">En el almacenamiento</span>
+            </article>
+            <article class="inv-kpi-card">
+              <span class="inv-kpi-card__label">Productos disponibles</span>
+              <strong class="inv-kpi-card__value" id="kpi-available-products">0</strong>
+              <span class="inv-kpi-card__meta" id="kpi-available-units">0 unidades en stock</span>
+            </article>
+            <article class="inv-kpi-card inv-kpi-card--accent">
+              <span class="inv-kpi-card__label">Productos con pocas existencias</span>
+              <strong class="inv-kpi-card__value" id="kpi-low-stock">0</strong>
+              <span class="inv-kpi-card__meta">Stock entre 1 y 5 unidades</span>
+            </article>
+            <article class="inv-kpi-card">
+              <span class="inv-kpi-card__label">Productos agotados</span>
+              <strong class="inv-kpi-card__value" id="kpi-out-of-stock">0</strong>
+              <span class="inv-kpi-card__meta">Stock igual a 0</span>
+            </article>
+          </div>
+
+          <div class="inv-table-card">
+            <div class="inv-toolbar">
+              <div class="inv-search-wrap">
+                <label class="sr-only" for="inv-search-input">Buscar por nombre o SKU</label>
+                <input class="inv-search-input" id="inv-search-input" type="search" placeholder="Buscar por nombre o SKU" autocomplete="off" />
+              </div>
+              <label class="sr-only" for="inv-category-filter">Filtrar por categoría</label>
+              <select class="inv-select" id="inv-category-filter">
+                <option value="todas">Todas las categorías</option>
+                <option value="videojuegos">Videojuegos</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="anime-figuras">Anime &amp; figuras</option>
+              </select>
+              <label class="sr-only" for="inv-stock-filter">Filtrar por disponibilidad</label>
+              <select class="inv-select" id="inv-stock-filter">
+                <option value="todos">Stock: todos</option>
+                <option value="disponible">Disponibles</option>
+                <option value="bajo">Pocas existencias (1-5)</option>
+                <option value="agotado">Agotados (0)</option>
+              </select>
+            </div>
+
+            <div class="inv-table-responsive">
+              <table class="inv-table" aria-label="Listado de productos en inventario">
+                <thead>
+                  <tr>
+                    <th>PRODUCTO</th>
+                    <th>CATEGORÍA</th>
+                    <th>PRECIO</th>
+                    <th>STOCK</th>
+                    <th>DISPONIBILIDAD / ESTADO</th>
+                    <th>ACCIÓN</th>
+                  </tr>
+                </thead>
+                <tbody id="inv-products-tbody"></tbody>
+              </table>
+            </div>
+
+            <div class="inv-table-footer">
+              <span id="inv-table-count">0 productos registrados</span>
+              <span>Alerta de stock: se destacan los productos con 5 unidades o menos y agotados.</span>
+            </div>
+          </div>
+
+          <div class="inv-edit-drawer" id="inv-edit-panel" hidden>
+            <div class="inv-edit-drawer__head">
+              <div>
+                <p class="eyebrow eyebrow--green" style="margin-bottom:4px;">EDICIÓN DE PRODUCTO</p>
+                <h2 class="inv-edit-drawer__title" id="inv-edit-title">Editar producto</h2>
+              </div>
+              <button class="inv-edit-drawer__close" id="inv-edit-cancel" type="button">Cancelar</button>
+            </div>
+
+            <form class="inv-edit-form" id="inv-edit-form">
+              <input type="hidden" id="inv-edit-id" />
+              <div class="inv-edit-field">
+                <label class="inv-edit-label" for="inv-edit-name">Nombre</label>
+                <input class="inv-edit-input" id="inv-edit-name" type="text" required />
+              </div>
+              <div class="inv-edit-field">
+                <label class="inv-edit-label" for="inv-edit-price">Precio (Bs)</label>
+                <input class="inv-edit-input" id="inv-edit-price" type="number" min="0" step="1" required />
+              </div>
+              <div class="inv-edit-field">
+                <label class="inv-edit-label" for="inv-edit-stock">Stock (unidades)</label>
+                <input class="inv-edit-input" id="inv-edit-stock" type="number" min="0" step="1" required />
+              </div>
+              <div class="inv-edit-field">
+                <label class="inv-edit-label" for="inv-edit-published">Estado en tienda</label>
+                <select class="inv-edit-input" id="inv-edit-published">
+                  <option value="true">Publicado (visible en catálogo)</option>
+                  <option value="false">Oculto / Borrador</option>
+                </select>
+              </div>
+              <div class="inv-edit-field inv-edit-field--check">
+                <label class="offer-check">
+                  <input id="inv-edit-offer" type="checkbox" />
+                  <span>Marcar en oferta</span>
+                </label>
+              </div>
+              <div class="inv-edit-actions">
+                <button class="btn btn--primary" type="submit">Guardar cambios</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 2: VENTAS PRIVADAS (PLANTILLA 6) -->
+        <section id="admin-view-ventas" hidden aria-labelledby="sales-heading">
+          <div class="admin-page-head">
+            <div>
+              <h1 class="admin-page-title" id="sales-heading">Ventas</h1>
+              <p class="admin-page-subtitle">Cada movimiento de tu tienda, en un solo lugar.</p>
+            </div>
+            <a class="btn btn--primary" href="./carrito.html">Nueva compra demo -&gt;</a>
+          </div>
+
+          <div class="sales-kpi-grid" aria-label="Indicadores de ventas">
+            <article class="sales-kpi-card sales-kpi-card--dark">
+              <span class="sales-kpi-card__label">Ingresos acumulados</span>
+              <strong class="sales-kpi-card__value sales-kpi-card__value--green" id="sales-kpi-income">Bs 0</strong>
+              <span class="sales-kpi-card__meta" id="sales-kpi-income-sub">0 operaciones registradas</span>
+            </article>
+
+            <article class="sales-kpi-card">
+              <span class="sales-kpi-card__label">Total de ventas registradas</span>
+              <strong class="sales-kpi-card__value" id="sales-kpi-total-amount">Bs 0</strong>
+              <span class="sales-kpi-card__meta">Compras de demostración en localStorage</span>
+            </article>
+
+            <article class="sales-kpi-card">
+              <span class="sales-kpi-card__label">Cantidad de operaciones</span>
+              <strong class="sales-kpi-card__value" id="sales-kpi-ops-count">0</strong>
+              <span class="sales-kpi-card__meta" id="sales-kpi-units-count">0 unidades vendidas</span>
+            </article>
+
+            <article class="sales-kpi-card">
+              <span class="sales-kpi-card__label">Ticket promedio</span>
+              <strong class="sales-kpi-card__value" id="sales-kpi-avg">Bs 0</strong>
+              <span class="sales-kpi-card__meta">Por operación registrada</span>
+            </article>
+          </div>
+
+          <div class="inv-table-card">
+            <div class="sales-toolbar">
+              <div class="inv-search-wrap">
+                <label class="sr-only" for="sales-search-input">Buscar por número de venta o producto</label>
+                <input
+                  class="inv-search-input"
+                  id="sales-search-input"
+                  type="search"
+                  placeholder="Buscar por número de venta o producto"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="sales-filter-pills" role="group" aria-label="Filtrar por estado de venta">
+                <button class="sales-pill-btn is-active" type="button" data-sales-status="todas">Todas</button>
+                <button class="sales-pill-btn" type="button" data-sales-status="Completada">Completada</button>
+                <button class="sales-pill-btn" type="button" data-sales-status="Pendiente">Pendiente</button>
+                <button class="sales-pill-btn" type="button" data-sales-status="Cancelada">Cancelada</button>
+              </div>
+            </div>
+
+            <div class="inv-table-responsive">
+              <table class="inv-table" aria-label="Historial de operaciones de venta">
+                <thead>
+                  <tr>
+                    <th>VENTA</th>
+                    <th>FECHA</th>
+                    <th>PRODUCTOS (CANTIDADES)</th>
+                    <th>IMPORTE</th>
+                    <th>ESTADO</th>
+                  </tr>
+                </thead>
+                <tbody id="sales-history-tbody"></tbody>
+              </table>
+            </div>
+
+            <div class="inv-table-footer">
+              <span id="sales-table-count">0 registros</span>
+              <span>Registro académico local: las operaciones provienen exclusivamente del carrito de demostración.</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 3: REGISTRO DE PRODUCTOS (PLANTILLA 7) -->
+        <section id="admin-view-registro" aria-labelledby="reg-heading">
+          <div class="admin-page-head">
+            <div>
+              <h1 class="admin-page-title" id="reg-heading">Registro de productos</h1>
+              <p class="admin-page-subtitle">Crea, edita y organiza los productos de tu catálogo.</p>
+            </div>
+          </div>
+
+          <div class="reg-mode-tabs" role="tablist" aria-label="Modo de registro de producto">
+            <button class="reg-mode-tab is-active" id="reg-tab-nuevo" type="button" role="tab" aria-selected="true" data-reg-mode="nuevo">
+              Nuevo producto
+            </button>
+            <button class="reg-mode-tab" id="reg-tab-editar" type="button" role="tab" aria-selected="false" data-reg-mode="editar">
+              Editar producto
+            </button>
+          </div>
+
+          <div class="reg-selector-bar" id="reg-edit-selector-wrap" hidden>
+            <label class="reg-label" for="reg-existing-select">Seleccionar producto registrado para editar</label>
+            <select class="reg-input" id="reg-existing-select"></select>
+          </div>
+
+          <form class="reg-layout" id="reg-product-form" novalidate>
+            <input type="hidden" id="reg-editing-id" />
+
+            <div class="reg-main-col">
+              <div class="reg-card">
+                <h2 class="reg-card__title">Información general</h2>
+
+                <div class="reg-field">
+                  <label class="reg-label" for="reg-name">Nombre del producto</label>
+                  <input class="reg-input" id="reg-name" type="text" placeholder="Ej. Control inalámbrico DualSense" required />
+                </div>
+
+                <div class="reg-two-col">
+                  <div class="reg-field">
+                    <label class="reg-label" for="reg-category">Categoría</label>
+                    <select class="reg-input" id="reg-category">
+                      <option value="videojuegos">Videojuegos</option>
+                      <option value="tecnologia">Tecnología</option>
+                      <option value="accesorios">Accesorios</option>
+                      <option value="anime-figuras">Anime &amp; figuras</option>
+                    </select>
+                  </div>
+
+                  <div class="reg-field">
+                    <label class="reg-label" for="reg-sku">SKU / Código</label>
+                    <input class="reg-input" id="reg-sku" type="text" placeholder="JV-CTR-001" required />
+                  </div>
+                </div>
+
+                <div class="reg-field">
+                  <label class="reg-label" for="reg-description">Descripción</label>
+                  <textarea
+                    class="reg-textarea"
+                    id="reg-description"
+                    rows="3"
+                    placeholder="Describe características clave, compatibilidad o presentación..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="reg-card">
+                <h2 class="reg-card__title">Precio y disponibilidad</h2>
+
+                <div class="reg-two-col">
+                  <div class="reg-field">
+                    <label class="reg-label" for="reg-price">Precio de venta (Bs)</label>
+                    <input class="reg-input" id="reg-price" type="number" min="0" step="1" value="0" required />
+                  </div>
+
+                  <div class="reg-field">
+                    <label class="reg-label" for="reg-stock">Stock disponible</label>
+                    <input class="reg-input" id="reg-stock" type="number" min="0" step="1" value="0" required />
+                  </div>
+                </div>
+
+                <div class="reg-two-col">
+                  <div class="reg-field">
+                    <label class="reg-label" for="reg-status">Estado</label>
+                    <select class="reg-input" id="reg-status">
+                      <option value="Activo">Activo</option>
+                      <option value="Borrador">Borrador</option>
+                    </select>
+                  </div>
+
+                  <div class="reg-field">
+                    <label class="reg-label" for="reg-collection">Colección / Etiqueta</label>
+                    <select class="reg-input" id="reg-collection">
+                      <option value="general">Catálogo general</option>
+                      <option value="featured">Destacado en inicio</option>
+                      <option value="offer">En oferta</option>
+                      <option value="both">Destacado + en oferta</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="reg-switch-row">
+                  <div>
+                    <span class="reg-switch-row__title">Visible en el catálogo público</span>
+                    <span class="reg-switch-row__sub">Si está desactivado, se mantiene en inventario pero no aparece al público.</span>
+                  </div>
+                  <label class="reg-switch">
+                    <input id="reg-published" type="checkbox" checked />
+                    <span class="reg-switch__slider" aria-hidden="true"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="reg-actions-bar">
+                <button class="btn btn--primary" id="reg-submit-btn" type="submit">Guardar cambios</button>
+                <button class="reg-cancel-btn" id="reg-reset-btn" type="button">Cancelar</button>
+                <span class="reg-feedback" id="reg-feedback" role="status" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <aside class="reg-side-col" aria-label="Vista previa del producto">
+              <div class="reg-preview-card">
+                <h2 class="reg-preview-card__heading">Fotografía del producto</h2>
+                <div class="reg-preview-box" id="reg-preview-box">
+                  <span class="reg-preview-box__code" id="reg-preview-code">JV-NEW-001</span>
+                  <span class="reg-preview-box__sub" id="reg-preview-cat">VIDEOJUEGOS</span>
+                </div>
+                <strong class="reg-preview-title" id="reg-preview-title">Nuevo producto JVMA</strong>
+                <strong class="reg-preview-price" id="reg-preview-price">Bs 0</strong>
+                <p class="reg-preview-hint" id="reg-preview-stock">Stock: 0 unidades · Visible en catálogo</p>
+                <div class="reg-field" style="margin-top:10px;">
+                  <label class="reg-label" for="reg-image-path">Ruta o imagen (opcional)</label>
+                  <input class="reg-input" id="reg-image-path" type="text" placeholder="./assets/img/producto.png" />
+                </div>
+              </div>
+
+              <div class="reg-info-card">
+                <strong class="reg-info-card__title">Listo para tu catálogo</strong>
+                <p class="reg-info-card__text">
+                  Los clientes solo ven el nombre, categoría, precio, descripción y disponibilidad en la tienda pública.
+                </p>
+                <span class="reg-info-card__note">
+                  Prototipo académico con almacenamiento local en navegador (localStorage).
+                </span>
+              </div>
+            </aside>
+          </form>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

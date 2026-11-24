@@ -1,499 +1,295 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="JVMA TECH & GAMING. Tecnología, accesorios gamer, audio y coleccionables de anime.">
-
-    <title>JVMA TECH & GAMING | Tienda de tecnología</title>
-
-    <!-- Conexión con nuestra hoja de estilos -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JVMA TECH &amp; GAMING — Tecnología, Gaming y Coleccionables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
+<body data-page="inicio">
+  <!-- Barra superior -->
+  <div class="topbar" role="region" aria-label="Aviso de tienda">
+    <div class="container topbar__inner">
+      <p class="topbar__text">TU PRÓXIMO NIVEL EMPIEZA AQUÍ / TECNOLOGÍA Y GAMING EN BOLIVIA</p>
+    </div>
+  </div>
 
-<body>
+  <!-- Encabezado principal -->
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="JVMA TECH & GAMING Inicio">
+        <span class="brand__title">JVMA</span>
+        <span class="brand__sub">TECH &amp; GAMING</span>
+      </a>
 
-    <!-- ENCABEZADO -->
-    <header class="encabezado">
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link is-active" href="./index.html">Inicio</a>
+        <a class="nav__link" href="./pages/catalogo.html">Catálogo</a>
+        <a class="nav__link" href="./pages/catalogo.html?oferta=1">Ofertas</a>
+        <a class="nav__link" href="./pages/catalogo.html?categoria=anime-figuras">Coleccionables</a>
+      </nav>
 
-        <div class="contenedor barra-navegacion">
+      <form class="search-box" id="home-search-form" action="./pages/catalogo.html" method="get" role="search">
+        <span class="search-box__icon" aria-hidden="true">⌕</span>
+        <label class="sr-only" for="home-search-input">Buscar productos</label>
+        <input
+          class="search-box__input"
+          id="home-search-input"
+          name="q"
+          type="search"
+          placeholder="Buscar tu próximo upgrade"
+          autocomplete="off"
+        />
+      </form>
 
-            <a href="index.html" class="logo">
-                <span class="logo-principal">JVMA</span>
-                <span class="logo-secundario">TECH & GAMING</span>
+      <a class="cart-pill" id="header-cart-link" href="./pages/carrito.html" aria-label="Ver carrito de compras">
+        <span class="cart-pill__icon" aria-hidden="true">🛒</span>
+        <span class="cart-pill__text">Carrito</span>
+        <span class="cart-pill__sep" aria-hidden="true">·</span>
+        <span class="cart-pill__count" id="header-cart-count">2</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero principal -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow eyebrow--muted">GAMING · TECH · ANIME</p>
+          <h1 class="hero__title" id="hero-heading">
+            Sube de nivel.<br />
+            <span class="text-accent">Sin límites.</span>
+          </h1>
+          <p class="hero__subtitle">
+            Tu próximo setup, tu próxima aventura.<br />
+            Descubre tecnología y coleccionables que van contigo.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="./pages/catalogo.html">
+              Explorar catálogo <span aria-hidden="true">-&gt;</span>
             </a>
-
-            <nav class="menu">
-                <a href="index.html" class="activo">Inicio</a>
-                <a href="pages/catalogo.html">Catálogo</a>
-                <a href="index.html#favoritos">Ofertas</a>
-                <a href="index.html#coleccion">Colecciones</a>
-            </nav>
-
-            <div class="acciones-menu">
-
-                <a href="pages/catalogo.html#busqueda" class="busqueda">
-                    Buscar productos
-                    <span>⌕</span>
-                </a>
-
-                <a href="pages/carrito.html" class="carrito">
-                    Carrito <span>🛒</span>
-                </a>
-
-            </div>
-
+            <a class="btn btn--ghost-dark" href="./pages/catalogo.html?categoria=anime-figuras">
+              Ver coleccionables
+            </a>
+          </div>
+          <p class="hero__footnote">NUEVOS FAVORITOS. LA MISMA PASIÓN.</p>
         </div>
 
-    </header>
-
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
-
-        <!-- BANNER PRINCIPAL -->
-        <section class="hero">
-
-            <div class="contenedor hero-contenido">
-
-                <div class="hero-texto">
-
-                    <span class="etiqueta">
-                        GAMING · TECNOLOGÍA · INNOVACIÓN
-                    </span>
-
-                    <h1>
-                        Sube de nivel.
-                        <span>Sin límites.</span>
-                    </h1>
-
-                    <p>
-                        Tu próxima aventura comienza aquí.
-                        Encuentra accesorios, tecnología y videojuegos
-                        con el estilo que buscas.
-                    </p>
-
-                    <div class="hero-botones">
-
-                        <a href="pages/catalogo.html" class="boton boton-verde">
-                            Explorar catálogo →
-                        </a>
-
-                        <a href="#categorias" class="boton boton-contorno">
-                            Ver categorías
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="hero-imagen">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1000&q=85"
-                        alt="Espacio de videojuegos y tecnología"
-                    >
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- BENEFICIOS -->
-        <section class="beneficios">
-
-            <div class="contenedor beneficios-grid">
-
-                <article class="beneficio">
-                    <span class="beneficio-icono">✦</span>
-                    <div>
-                        <h3>Ofertas en línea</h3>
-                        <p>Promociones especiales</p>
-                    </div>
-                </article>
-
-                <article class="beneficio">
-                    <span class="beneficio-icono">✓</span>
-                    <div>
-                        <h3>Compra con confianza</h3>
-                        <p>Atención personalizada</p>
-                    </div>
-                </article>
-
-                <article class="beneficio">
-                    <span class="beneficio-icono">♧</span>
-                    <div>
-                        <h3>Siempre conectados</h3>
-                        <p>Estamos para ayudarte</p>
-                    </div>
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- CATEGORÍAS -->
-        <section class="seccion contenedor" id="categorias">
-
-            <div class="encabezado-seccion">
-
-                <div>
-                    <span class="subtitulo">EXPLORA NUESTRA TIENDA</span>
-                    <h2>Encuentra tu universo.</h2>
-                </div>
-
-                <a href="pages/catalogo.html" class="enlace-verde">
-                    Ver catálogo completo →
-                </a>
-
-            </div>
-
-
-            <div class="categorias-grid">
-
-                <a href="pages/catalogo.html?categoria=videojuegos" class="categoria">
-                    <div class="categoria-imagen">
-                        <img
-                            src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=500&q=80"
-                            alt="Controles y videojuegos"
-                            loading="lazy"
-                        >
-                    </div>
-                    <h3>Videojuegos</h3>
-                </a>
-
-                <a href="pages/catalogo.html?categoria=tecnologia" class="categoria">
-                    <div class="categoria-imagen">
-                        <img
-                            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=80"
-                            alt="Teléfono inteligente"
-                            loading="lazy"
-                        >
-                    </div>
-                    <h3>Tecnología</h3>
-                </a>
-
-                <a href="pages/catalogo.html?categoria=audio" class="categoria">
-                    <div class="categoria-imagen">
-                        <img
-                            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80"
-                            alt="Audífonos"
-                            loading="lazy"
-                        >
-                    </div>
-                    <h3>Audio</h3>
-                </a>
-
-                <a href="pages/catalogo.html?categoria=accesorios" class="categoria">
-                    <div class="categoria-imagen">
-                        <img
-                            src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=500&q=80"
-                            alt="Teclado mecánico"
-                            loading="lazy"
-                        >
-                    </div>
-                    <h3>Accesorios</h3>
-                </a>
-
-                <a href="pages/catalogo.html?categoria=anime" class="categoria">
-                    <div class="categoria-imagen">
-                        <img
-                            src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=500&q=80"
-                            alt="Coleccionables y figuras"
-                            loading="lazy"
-                        >
-                    </div>
-                    <h3>Anime y figuras</h3>
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- PRODUCTOS FAVORITOS -->
-        <section class="seccion favoritos" id="favoritos">
-
-            <div class="contenedor">
-
-                <div class="encabezado-seccion">
-
-                    <div>
-                        <span class="subtitulo">SELECCIÓN ESPECIAL</span>
-                        <h2>Favoritos del momento</h2>
-                    </div>
-
-                    <a href="pages/catalogo.html" class="enlace-verde">
-                        Ver todos los productos →
-                    </a>
-
-                </div>
-
-
-                <div class="productos-grid">
-
-                    <!-- PRODUCTO 1 -->
-                    <article class="producto">
-
-                        <div class="producto-imagen">
-                            <img
-                                src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?auto=format&fit=crop&w=600&q=85"
-                                alt="Control para videojuegos"
-                                loading="lazy"
-                            >
-                            <span class="producto-etiqueta">DESTACADO</span>
-                        </div>
-
-                        <div class="producto-info">
-
-                            <span class="producto-categoria">GAMING</span>
-
-                            <h3>Control inalámbrico</h3>
-
-                            <p class="producto-precio">Bs 599</p>
-
-                            <a href="pages/producto.html" class="boton-producto">
-                                Ver producto
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 2 -->
-                    <article class="producto">
-
-                        <div class="producto-imagen">
-                            <img
-                                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=85"
-                                alt="Audífonos de alta calidad"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <div class="producto-info">
-
-                            <span class="producto-categoria">AUDIO</span>
-
-                            <h3>Headset premium</h3>
-
-                            <p class="producto-precio">Bs 349</p>
-
-                            <a href="pages/producto.html" class="boton-producto">
-                                Ver producto
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 3 -->
-                    <article class="producto">
-
-                        <div class="producto-imagen">
-                            <img
-                                src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=85"
-                                alt="Figura coleccionable"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <div class="producto-info">
-
-                            <span class="producto-categoria">COLECCIONABLES</span>
-
-                            <h3>Figura coleccionable</h3>
-
-                            <p class="producto-precio">Bs 280</p>
-
-                            <a href="pages/producto.html" class="boton-producto">
-                                Ver producto
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUCTO 4 -->
-                    <article class="producto">
-
-                        <div class="producto-imagen">
-                            <img
-                                src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=85"
-                                alt="Teclado mecánico"
-                                loading="lazy"
-                            >
-                        </div>
-
-                        <div class="producto-info">
-
-                            <span class="producto-categoria">PERIFÉRICOS</span>
-
-                            <h3>Teclado mecánico</h3>
-
-                            <p class="producto-precio">Bs 450</p>
-
-                            <a href="pages/producto.html" class="boton-producto">
-                                Ver producto
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- COLECCIÓN DESTACADA -->
-        <section class="coleccion" id="coleccion">
-
-            <div class="contenedor coleccion-contenido">
-
-                <div class="coleccion-texto">
-
-                    <span class="subtitulo">COLECCIÓN ESPECIAL</span>
-
-                    <h2>
-                        Tu colección
-                        <span>merece otro nivel.</span>
-                    </h2>
-
-                    <p>
-                        Descubre figuras, personajes y artículos
-                        especiales para los verdaderos fanáticos.
-                    </p>
-
-                    <a href="pages/catalogo.html?categoria=anime" class="boton boton-verde">
-                        Explorar colección →
-                    </a>
-
-                </div>
-
-                <div class="coleccion-imagen">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=85"
-                        alt="Colección de figuras"
-                        loading="lazy"
-                    >
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SUSCRIPCIÓN -->
-        <section class="suscripcion">
-
-            <div class="contenedor suscripcion-contenido">
-
-                <div>
-                    <h2>El próximo drop empieza contigo.</h2>
-                    <p>Descubre novedades, promociones y lanzamientos.</p>
-                </div>
-
-                <form class="formulario-suscripcion">
-
-                    <label for="correo" class="texto-oculto">
-                        Correo electrónico
-                    </label>
-
-                    <input
-                        type="email"
-                        id="correo"
-                        placeholder="Tu correo electrónico"
-                    >
-
-                    <button type="submit">
-                        Suscribirme
-                    </button>
-
-                </form>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer" id="contacto">
-
-        <div class="contenedor footer-grid">
-
-            <div class="footer-marca">
-
-                <a href="index.html" class="logo logo-footer">
-                    <span class="logo-principal">JVMA</span>
-                    <span class="logo-secundario">TECH & GAMING</span>
-                </a>
-
-                <p>
-                    Tecnología, gaming y coleccionables
-                    para quienes buscan algo diferente.
-                </p>
-
-            </div>
-
-
-            <div class="footer-columna">
-
-                <h3>Explorar</h3>
-
-                <a href="index.html">Inicio</a>
-                <a href="#categorias">Categorías</a>
-                <a href="#favoritos">Productos</a>
-
-            </div>
-
-
-            <div class="footer-columna">
-
-                <h3>Mi cuenta</h3>
-
-                <a href="pages/carrito.html">Mi carrito</a>
-                <a href="pages/catalogo.html">Catálogo</a>
-
-            </div>
-
-
-            <div class="footer-columna">
-
-                <h3>Contacto</h3>
-
-                <p>Atención al cliente</p>
-                <a href="mailto:contacto@jvma.com">Correo electrónico</a>
-
-            </div>
-
+        <div class="hero__visual">
+          <img class="home-image home-image--hero" src="./assets/img/hero-setup.jpeg" alt="Setup gaming de JVMA Tech & Gaming">
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios clave -->
+    <section class="benefits" aria-label="Beneficios de compra">
+      <div class="container benefits__grid">
+        <article class="benefit-item">
+          <h2 class="benefit-item__title">Envíos en Bolivia</h2>
+          <p class="benefit-item__desc">Tu próximo upgrade, más cerca.</p>
+        </article>
+        <article class="benefit-item">
+          <h2 class="benefit-item__title">Compra con confianza</h2>
+          <p class="benefit-item__desc">Productos originales y garantía.</p>
+        </article>
+        <article class="benefit-item">
+          <h2 class="benefit-item__title">Asesoría gamer</h2>
+          <p class="benefit-item__desc">Te ayudamos a elegir mejor.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Categorías: Encuentra tu universo -->
+    <section class="section" id="categorias" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title" id="categories-heading">Encuentra tu universo</h2>
         </div>
 
+        <div class="categories-grid" id="home-categories-grid">
+          <a class="category-card" href="./pages/catalogo.html?categoria=videojuegos">
+            <div class="category-card__info">
+              <span class="category-card__num">01</span>
+              <h3 class="category-card__name">Videojuegos</h3>
+              <p class="category-card__desc">Consolas y controles</p>
+            </div>
+            <div class="category-card__thumb" aria-hidden="true"><img src="./assets/img/cat-videojuegos.jpeg" alt="" loading="lazy"></div>
+          </a>
 
-        <div class="contenedor footer-final">
+          <a class="category-card" href="./pages/catalogo.html?categoria=tecnologia">
+            <div class="category-card__info">
+              <span class="category-card__num">02</span>
+              <h3 class="category-card__name">Tecnología</h3>
+              <p class="category-card__desc">Potencia tu día a día</p>
+            </div>
+            <div class="category-card__thumb" aria-hidden="true"><img src="./assets/img/cat-tecnologia.jpeg" alt="" loading="lazy"></div>
+          </a>
 
-            <p>© 2026 JVMA TECH & GAMING. Todos los derechos reservados.</p>
+          <a class="category-card" href="./pages/catalogo.html?categoria=accesorios">
+            <div class="category-card__info">
+              <span class="category-card__num">03</span>
+              <h3 class="category-card__name">Accesorios</h3>
+              <p class="category-card__desc">Completa tu setup</p>
+            </div>
+            <div class="category-card__thumb" aria-hidden="true"><img src="./assets/img/cat-accesorios.jpeg" alt="" loading="lazy"></div>
+          </a>
 
-            <span>Diseñado con pasión por la tecnología.</span>
+          <a class="category-card" href="./pages/catalogo.html?categoria=anime-figuras">
+            <div class="category-card__info">
+              <span class="category-card__num">04</span>
+              <h3 class="category-card__name">Anime &amp; figuras</h3>
+              <p class="category-card__desc">Colecciona tu pasión</p>
+            </div>
+            <div class="category-card__thumb" aria-hidden="true"><img src="./assets/img/cat-anime.jpeg" alt="" loading="lazy"></div>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- Productos destacados: Favoritos del momento -->
+    <section class="section section--compact-top" id="destacados" aria-labelledby="featured-heading">
+      <div class="container">
+        <p class="eyebrow eyebrow--green">LO MÁS BUSCADO</p>
+        <div class="section__head section__head--row">
+          <h2 class="section__title" id="featured-heading">Favoritos del momento</h2>
+          <a class="link-arrow" href="./pages/catalogo.html">
+            Ver todo el catálogo <span aria-hidden="true">-&gt;</span>
+          </a>
         </div>
 
-    </footer>
+        <div class="products-grid" id="featured-products-grid">
+          <!-- Renderizado dinámico desde js/main.js con fallback visual -->
+        </div>
+      </div>
+    </section>
 
+    <!-- Colección / Ofertas: Tu colección merece otro nivel -->
+    <section class="collection-banner" id="ofertas" aria-labelledby="collection-heading">
+      <div class="container collection-banner__grid">
+        <div class="collection-banner__content">
+          <p class="eyebrow eyebrow--muted">PARA LOS QUE VIVEN EL ANIME</p>
+          <h2 class="collection-banner__title" id="collection-heading">
+            Tu colección<br />
+            merece otro nivel.
+          </h2>
+          <div class="collection-banner__actions">
+            <a class="btn btn--primary" href="./pages/catalogo.html?categoria=anime-figuras&amp;oferta=1">
+              Explorar figuras <span aria-hidden="true">-&gt;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="collection-banner__visual">
+          <img class="home-image home-image--banner" src="./assets/img/banner-coleccion.jpeg" alt="Colección de figuras anime" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Suscripción / Drops -->
+    <section class="newsletter" id="suscripcion" aria-labelledby="newsletter-heading">
+      <div class="container newsletter__grid">
+        <div class="newsletter__copy">
+          <h2 class="newsletter__title" id="newsletter-heading">El próximo drop empieza contigo.</h2>
+          <p class="newsletter__desc">Novedades, lanzamientos y ofertas para tu universo.</p>
+        </div>
+
+        <form class="newsletter__form" id="newsletter-form" novalidate>
+          <label class="sr-only" for="newsletter-email">Tu correo electrónico</label>
+          <input
+            class="newsletter__input"
+            id="newsletter-email"
+            name="email"
+            type="email"
+            placeholder="Tu correo electrónico"
+            required
+          />
+          <button class="btn btn--primary newsletter__btn" type="submit">Unirme</button>
+          <p class="newsletter__feedback" id="newsletter-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="./index.html">
+          <span class="brand__title">JVMA</span>
+          <span class="brand__sub">TECH &amp; GAMING</span>
+        </a>
+        <p class="footer__tagline">Tecnología que conecta. Gaming que inspira.</p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3 class="footer__heading">Explora</h3>
+          <ul class="footer__list">
+            <li><a href="./pages/catalogo.html">Catálogo</a></li>
+            <li><a href="./pages/catalogo.html?categoria=videojuegos">Videojuegos y tecnología</a></li>
+            <li><a href="./pages/catalogo.html?categoria=anime-figuras">Figuras y coleccionables</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Te ayudamos</h3>
+          <ul class="footer__list">
+            <li><a href="./pages/catalogo.html?seccion=envios">Envíos y entregas</a></li>
+            <li><a href="./pages/catalogo.html?seccion=garantia">Cambios y garantía</a></li>
+            <li><a href="./pages/catalogo.html?seccion=faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__heading">Conecta con JVMA</h3>
+          <ul class="footer__list">
+            <li><a href="./pages/catalogo.html?seccion=asesoria">Asesoría personalizada</a></li>
+            <li><a href="./pages/catalogo.html?seccion=redes">Síguenos en redes</a></li>
+            <li><a href="./pages/catalogo.html?seccion=torneos">Bolivia · Torneos y drops</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p class="footer__copy">© 2026 JVMA TECH &amp; GAMING. Todos los derechos reservados.</p>
+      <a class="owner-access-link" id="owner-access-trigger" href="./pages/admin.html?login=1">Acceso del propietario</a>
+    </div>
+  </footer>
+
+  <!-- Modal de demostración académica: Acceso del propietario -->
+  <div class="owner-modal" id="owner-login-modal" role="dialog" aria-modal="true" aria-labelledby="owner-modal-title" hidden>
+    <div class="owner-modal__card">
+      <button class="owner-modal__close" id="owner-modal-close" type="button" aria-label="Cerrar ventana">✕</button>
+      <p class="eyebrow eyebrow--green">DEMOSTRACIÓN ACADÉMICA · ÁREA PRIVADA</p>
+      <h2 class="owner-modal__title" id="owner-modal-title">Acceso del propietario</h2>
+      <p class="owner-modal__note">Simulación en navegador con localStorage (no es seguridad real en producción).</p>
+
+      <form class="owner-modal__form" id="owner-login-form" novalidate>
+        <div class="owner-modal__field">
+          <label class="owner-modal__label" for="owner-username">Usuario</label>
+          <input class="owner-modal__input" id="owner-username" name="username" type="text" autocomplete="username" required />
+        </div>
+
+        <div class="owner-modal__field">
+          <label class="owner-modal__label" for="owner-password">Contraseña</label>
+          <input class="owner-modal__input" id="owner-password" name="password" type="password" autocomplete="current-password" required />
+        </div>
+
+        <p class="owner-modal__error" id="owner-login-error" role="alert" aria-live="polite"></p>
+
+        <div class="owner-modal__actions">
+          <button class="btn btn--primary" type="submit">Ingresar al panel</button>
+          <a class="owner-modal__direct" href="./pages/admin.html?login=1">Ir directo a admin.html</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
