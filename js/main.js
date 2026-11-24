@@ -1,5 +1,5 @@
 /* ==========================================================================
-   JVMA TECH & GAMING Ã¢â‚¬â€ Estado Compartido (localStorage) y LÃƒÂ³gica de Vistas
+   JVMA TECH & GAMING Ã¢â‚¬â€ Estado Compartido (localStorage) y Lógica de Vistas
    ========================================================================== */
 
 (function () {
@@ -11,7 +11,7 @@
   const OWNER_PASS = "Sis-2026";
   const LOW_STOCK_THRESHOLD = 5;
 
-  /* ConfiguraciÃƒÂ³n centralizada de WhatsApp (ÃƒÂºnico lugar para el nÃƒÂºmero oficial) */
+  /* Configuración centralizada de WhatsApp (único lugar para el número oficial) */
   const WHATSAPP_CONFIG = {
     phoneIntl: "59169625935",
     phoneDisplay: "+591 69625935",
@@ -26,11 +26,11 @@
 
   function getWhatsAppMessages() {
     return {
-      general: `Hola ${WHATSAPP_CONFIG.storeName}, me gustarÃƒÂ­a consultar por productos disponibles y coordinar entrega.`,
+      general: `Hola ${WHATSAPP_CONFIG.storeName}, me gustaría consultar por productos disponibles y coordinar entrega.`,
       catalog: (categoryLabel, queryText) => {
         const parts = [`Hola ${WHATSAPP_CONFIG.storeName}, deseo consultar productos`];
         if (categoryLabel && categoryLabel !== "todos") {
-          parts.push(`de la categorÃƒÂ­a ${categoryLabel}`);
+          parts.push(`de la categoría ${categoryLabel}`);
         }
         if (queryText) {
           parts.push(`sobre "${queryText}"`);
@@ -44,13 +44,13 @@
         const summary = lines
           .map((l) => `- ${l.product.name} x${l.qty} (${formatPrice(l.subtotal, l.product.currency)})`)
           .join("\n");
-        return `Hola ${WHATSAPP_CONFIG.storeName}, quiero coordinar este pedido de demostraciÃƒÂ³n:\n${summary}\nTotal estimado: ${formatPrice(totalAmount, "Bs")}. Por favor indÃƒÂ­came disponibilidad y entrega.`;
+        return `Hola ${WHATSAPP_CONFIG.storeName}, quiero coordinar este pedido de demostración:\n${summary}\nTotal estimado: ${formatPrice(totalAmount, "Bs")}. Por favor indícame disponibilidad y entrega.`;
       },
       afterSale: (saleRecord) => {
         const itemsTxt = Array.isArray(saleRecord.items)
           ? saleRecord.items.map((i) => `${i.name} x${i.qty}`).join(", ")
           : "productos seleccionados";
-        return `Hola ${WHATSAPP_CONFIG.storeName}, realicÃƒÂ© la compra de demostraciÃƒÂ³n #${saleRecord.id} (${itemsTxt}, total ${formatPrice(saleRecord.total, saleRecord.currency)}). Quisiera consultar disponibilidad, entrega y detalles del pedido.`;
+        return `Hola ${WHATSAPP_CONFIG.storeName}, realicé la compra de demostración #${saleRecord.id} (${itemsTxt}, total ${formatPrice(saleRecord.total, saleRecord.currency)}). Quisiera consultar disponibilidad, entrega y detalles del pedido.`;
       }
     };
   }
@@ -489,7 +489,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch (_err) {
-      // Sin bloqueo si el almacenamiento estÃƒÂ¡ restringido
+      // Sin bloqueo si el almacenamiento está restringido
     }
   }
 
@@ -528,7 +528,7 @@
     return resolveUrl(normalized);
   }
 
-  /* IntegraciÃƒÂ³n discreta en footer y secciÃƒÂ³n de contacto de inicio */
+  /* Integración discreta en footer y sección de contacto de inicio */
   function initGlobalWhatsAppLinks() {
     const msgs = getWhatsAppMessages();
     const generalUrl = buildWhatsAppUrl(msgs.general);
@@ -571,7 +571,7 @@
         box.innerHTML = `
           <div>
             <strong style="display:block;font-size:12px;">Contacto directo por WhatsApp</strong>
-            <span style="font-size:11px;color:var(--color-gray);">Consultas, disponibilidad y coordinaciÃƒÂ³n de entregas (${WHATSAPP_CONFIG.phoneDisplay}).</span>
+            <span style="font-size:11px;color:var(--color-gray);">Consultas, disponibilidad y coordinación de entregas (${WHATSAPP_CONFIG.phoneDisplay}).</span>
           </div>
           <a class="wa-inline-link" href="${generalUrl}" target="_blank" rel="noopener noreferrer">
             Consultar por WhatsApp -&gt;
@@ -647,7 +647,7 @@
       const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
       if (!isValid) {
-        feedback.textContent = "Ingresa un correo electrÃƒÂ³nico vÃƒÂ¡lido para recibir los drops.";
+        feedback.textContent = "Ingresa un correo electrónico válido para recibir los drops.";
         input.focus();
         return;
       }
@@ -656,7 +656,7 @@
         state.subscribers.push(email);
         saveState(state);
       }
-      feedback.textContent = `Listo: ${email} quedÃƒÂ³ registrado para prÃƒÂ³ximos drops y ofertas.`;
+      feedback.textContent = `Listo: ${email} quedó registrado para próximos drops y ofertas.`;
       form.reset();
     });
   }
@@ -713,11 +713,11 @@
             JSON.stringify({ user: OWNER_USER, authenticatedAt: new Date().toISOString() })
           );
         } catch (_err) {
-          // Continuar con redirecciÃƒÂ³n acadÃƒÂ©mica
+          // Continuar con redirección académica
         }
         window.location.href = adminTarget;
       } else {
-        errorEl.textContent = "Usuario o contraseÃƒÂ±a incorrectos.";
+        errorEl.textContent = "Usuario o contraseña incorrectos.";
       }
     });
   }
@@ -860,7 +860,7 @@
         gridEl.innerHTML = `
           <div class="catalog-empty">
             <h2 class="catalog-empty__title">No encontramos productos con esos filtros</h2>
-            <p class="catalog-empty__desc">Prueba limpiando los filtros o buscando otro tÃƒÂ©rmino en el catÃƒÂ¡logo.</p>
+            <p class="catalog-empty__desc">Prueba limpiando los filtros o buscando otro término en el catálogo.</p>
             <button class="btn btn--primary" id="catalog-empty-reset" type="button">Restablecer filtros</button>
           </div>
         `;
@@ -938,7 +938,7 @@
               btn.classList.remove("is-added");
             }, 1100);
           } else if (result.reason === "limite-stock") {
-            btn.textContent = "Stock mÃƒÂ¡ximo alcanzado";
+            btn.textContent = "Stock máximo alcanzado";
             window.setTimeout(() => {
               btn.textContent = "Agregar al carrito";
             }, 1200);
@@ -1063,7 +1063,7 @@
     if (catEl) catEl.textContent = `JVMA Ã‚· ${product.categoryLabel}`;
     if (titleEl) titleEl.textContent = product.name;
     if (subtitleEl) {
-      subtitleEl.textContent = `CategorÃƒÂ­a: ${product.categoryLabel} Ã‚· Disponible en JVMA TECH & GAMING`;
+      subtitleEl.textContent = `Categoría: ${product.categoryLabel} Ã‚· Disponible en JVMA TECH & GAMING`;
     }
 
     const regularPrice = product.offer ? Math.round(product.price * 1.15) : 0;
@@ -1091,7 +1091,7 @@
     if (descEl) {
       descEl.textContent =
         product.description ||
-        "Producto seleccionado de JVMA TECH & GAMING para gaming, tecnologÃƒÂ­a y colecciÃƒÂ³n.";
+        "Producto seleccionado de JVMA TECH & GAMING para gaming, tecnología y colección.";
     }
 
     const imgSrc = product.image ? resolveUrl(product.image) : "";
@@ -1144,7 +1144,7 @@
       if (val > product.stock) {
         val = product.stock;
         if (feedbackEl) {
-          feedbackEl.textContent = `Cantidad ajustada al stock mÃƒÂ¡ximo disponible (${product.stock}).`;
+          feedbackEl.textContent = `Cantidad ajustada al stock máximo disponible (${product.stock}).`;
           feedbackEl.classList.add("is-error");
         }
       }
@@ -1197,14 +1197,14 @@
         if (result.ok) {
           if (feedbackEl) {
             feedbackEl.classList.remove("is-error");
-            feedbackEl.innerHTML = `Se ${chosenQty === 1 ? "agregÃƒÂ³ 1 unidad" : `agregaron ${chosenQty} unidades`} de <strong>${product.name}</strong> al carrito. <a href="./carrito.html" style="text-decoration:underline;">Ir al carrito</a>`;
+            feedbackEl.innerHTML = `Se ${chosenQty === 1 ? "agregó 1 unidad" : `agregaron ${chosenQty} unidades`} de <strong>${product.name}</strong> al carrito. <a href="./carrito.html" style="text-decoration:underline;">Ir al carrito</a>`;
           }
         } else if (result.reason === "limite-stock" && feedbackEl) {
           feedbackEl.classList.add("is-error");
           feedbackEl.textContent =
             result.maxAvailable > 0
-              ? `No puedes superar el stock disponible. Puedes agregar hasta ${result.maxAvailable} ${result.maxAvailable === 1 ? "unidad mÃƒÂ¡s" : "unidades mÃƒÂ¡s"}.`
-              : "Ya alcanzaste el stock mÃƒÂ¡ximo disponible de este producto en tu carrito.";
+              ? `No puedes superar el stock disponible. Puedes agregar hasta ${result.maxAvailable} ${result.maxAvailable === 1 ? "unidad más" : "unidades más"}.`
+              : "Ya alcanzaste el stock máximo disponible de este producto en tu carrito.";
         }
       });
     }
@@ -1314,9 +1314,9 @@
       if (lines.length === 0) {
         listEl.innerHTML = `
           <div class="cart-empty-box">
-            <h2 class="cart-empty-box__title">Tu carrito estÃƒÂ¡ vacÃƒÂ­o</h2>
-            <p class="cart-empty-box__desc">Explora el catÃƒÂ¡logo o revisa el detalle de un producto para agregar artÃƒÂ­culos.</p>
-            <a class="btn btn--primary" href="./catalogo.html">Ir al catÃƒÂ¡logo <span aria-hidden="true">-&gt;</span></a>
+            <h2 class="cart-empty-box__title">Tu carrito está vacío</h2>
+            <p class="cart-empty-box__desc">Explora el catálogo o revisa el detalle de un producto para agregar artículos.</p>
+            <a class="btn btn--primary" href="./catalogo.html">Ir al catálogo <span aria-hidden="true">-&gt;</span></a>
           </div>
         `;
         return;
@@ -1395,7 +1395,7 @@
           if (!entry || !prod) return;
 
           if (entry.qty + 1 > prod.stock) {
-            setFeedback(`No hay mÃƒÂ¡s stock disponible para "${prod.name}" (mÃƒÂ¡ximo: ${prod.stock}).`);
+            setFeedback(`No hay más stock disponible para "${prod.name}" (máximo: ${prod.stock}).`);
             return;
           }
           setFeedback("");
@@ -1450,7 +1450,7 @@
     checkoutBtn.addEventListener("click", () => {
       const lines = getResolvedCartLines();
       if (lines.length === 0) {
-        setFeedback("Tu carrito estÃƒÂ¡ vacÃƒÂ­o. Agrega productos antes de finalizar la compra.");
+        setFeedback("Tu carrito está vacío. Agrega productos antes de finalizar la compra.");
         return;
       }
 
@@ -1502,8 +1502,8 @@
         const afterSaleUrl = buildWhatsAppUrl(msgs.afterSale(saleRecord));
         saleBannerEl.hidden = false;
         saleBannerEl.innerHTML = `
-          <strong>Compra de demostraciÃƒÂ³n registrada (${saleRecord.id})</strong> Ã¢â‚¬â€ Total: <strong>${formatPrice(saleRecord.total, saleRecord.currency)}</strong>.
-          Se descontaron las unidades del inventario y se guardÃƒÂ³ en el historial demo.
+          <strong>Compra de demostración registrada (${saleRecord.id})</strong> Ã¢â‚¬â€ Total: <strong>${formatPrice(saleRecord.total, saleRecord.currency)}</strong>.
+          Se descontaron las unidades del inventario y se guardó en el historial demo.
           <a href="${afterSaleUrl}" target="_blank" rel="noopener noreferrer" style="margin-left:8px; font-weight:700; text-decoration:underline;">Consultar disponibilidad y entrega por WhatsApp</a>
           <a href="./admin.html?login=1" style="margin-left:8px; font-weight:700; text-decoration:underline;">Ver ventas en panel</a>
         `;
@@ -1563,7 +1563,7 @@
           gateError.textContent = "";
           syncAuth();
         } else {
-          gateError.textContent = "Usuario o contraseÃƒÂ±a incorrectos.";
+          gateError.textContent = "Usuario o contraseña incorrectos.";
         }
       });
     }
@@ -1764,7 +1764,7 @@
       const avg = opsCount > 0 ? Math.round(totalAmount / opsCount) : 0;
 
       if (salesIncomeEl) salesIncomeEl.textContent = formatPrice(totalAmount, "Bs");
-      if (salesIncomeSubEl) salesIncomeSubEl.textContent = `${opsCount} ${opsCount === 1 ? "operaciÃƒÂ³n registrada" : "operaciones registradas"}`;
+      if (salesIncomeSubEl) salesIncomeSubEl.textContent = `${opsCount} ${opsCount === 1 ? "operación registrada" : "operaciones registradas"}`;
       if (salesTotalAmtEl) salesTotalAmtEl.textContent = formatPrice(totalAmount, "Bs");
       if (salesOpsEl) salesOpsEl.textContent = String(opsCount);
       if (salesUnitsEl) salesUnitsEl.textContent = `${totalUnits} ${totalUnits === 1 ? "unidad vendida" : "unidades vendidas"}`;
@@ -1799,7 +1799,7 @@
         salesTbodyEl.innerHTML = `
           <tr>
             <td colspan="5" style="text-align:center;padding:24px;color:var(--color-gray);">
-              No hay compras de demostraciÃƒÂ³n registradas aÃƒÂºn. Finaliza una compra desde el carrito para verla aquÃƒÂ­.
+              No hay compras de demostración registradas aún. Finaliza una compra desde el carrito para verla aquí.
             </td>
           </tr>
         `;
@@ -1817,7 +1817,7 @@
 
         const itemsHtml = Array.isArray(sale.items) && sale.items.length > 0
           ? sale.items.map((it) => `${it.name} <strong>(Ãƒâ€”${it.qty})</strong>`).join(" Ã‚· ")
-          : "Sin detalle de ÃƒÂ­tems";
+          : "Sin detalle de ítems";
 
         return `
           <tr>
@@ -1884,7 +1884,7 @@
       if (prevTitle) prevTitle.textContent = nameVal;
       if (prevPrice) prevPrice.textContent = formatPrice(priceVal, "Bs");
       if (prevStock) {
-        prevStock.textContent = `Stock: ${stockVal} ${stockVal === 1 ? "unidad" : "unidades"} Ã‚· ${pubVal ? "Visible en catÃƒÂ¡logo" : "Oculto"}`;
+        prevStock.textContent = `Stock: ${stockVal} ${stockVal === 1 ? "unidad" : "unidades"} Ã‚· ${pubVal ? "Visible en catálogo" : "Oculto"}`;
       }
     }
 
@@ -2039,7 +2039,7 @@
             saveState(state);
             renderInvFn();
             renderFeaturedProducts(state);
-            if (regFeedback) regFeedback.textContent = `Cambios guardados en "${nameVal}" y sincronizados con el catÃƒÂ¡logo.`;
+            if (regFeedback) regFeedback.textContent = `Cambios guardados en "${nameVal}" y sincronizados con el catálogo.`;
           }
         } else {
           const slugBase = nameVal
@@ -2074,13 +2074,13 @@
           saveState(state);
           renderInvFn();
           renderFeaturedProducts(state);
-          if (regFeedback) regFeedback.textContent = `Producto "${nameVal}" registrado y sincronizado con inventario y catÃƒÂ¡logo.`;
+          if (regFeedback) regFeedback.textContent = `Producto "${nameVal}" registrado y sincronizado con inventario y catálogo.`;
           resetRegistroFormToNew();
         }
       });
     }
 
-    // Permitir abrir ediciÃƒÂ³n desde Inventario directamente o en panel rÃƒÂ¡pido
+    // Permitir abrir edición desde Inventario directamente o en panel rápido
     if (typeof openEditInRegistroFn === "function" && tbody) {
       tbody.addEventListener("dblclick", (ev) => {
         const btn = ev.target.closest("[data-inv-edit]");
