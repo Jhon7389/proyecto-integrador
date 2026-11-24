@@ -1,5 +1,5 @@
-/* ==========================================================================
-   JVMA TECH & GAMING â€” Estado Compartido (localStorage) y LÃ³gica de Vistas
+﻿/* ==========================================================================
+   JVMA TECH & GAMING Ã¢â‚¬â€ Estado Compartido (localStorage) y LÃƒÂ³gica de Vistas
    ========================================================================== */
 
 (function () {
@@ -11,7 +11,7 @@
   const OWNER_PASS = "Sis-2026";
   const LOW_STOCK_THRESHOLD = 5;
 
-  /* ConfiguraciÃ³n centralizada de WhatsApp (Ãºnico lugar para el nÃºmero oficial) */
+  /* ConfiguraciÃƒÂ³n centralizada de WhatsApp (ÃƒÂºnico lugar para el nÃƒÂºmero oficial) */
   const WHATSAPP_CONFIG = {
     phoneIntl: "59169625935",
     phoneDisplay: "+591 69625935",
@@ -26,11 +26,11 @@
 
   function getWhatsAppMessages() {
     return {
-      general: `Hola ${WHATSAPP_CONFIG.storeName}, me gustarÃ­a consultar por productos disponibles y coordinar entrega.`,
+      general: `Hola ${WHATSAPP_CONFIG.storeName}, me gustarÃƒÂ­a consultar por productos disponibles y coordinar entrega.`,
       catalog: (categoryLabel, queryText) => {
         const parts = [`Hola ${WHATSAPP_CONFIG.storeName}, deseo consultar productos`];
         if (categoryLabel && categoryLabel !== "todos") {
-          parts.push(`de la categorÃ­a ${categoryLabel}`);
+          parts.push(`de la categorÃƒÂ­a ${categoryLabel}`);
         }
         if (queryText) {
           parts.push(`sobre "${queryText}"`);
@@ -44,13 +44,13 @@
         const summary = lines
           .map((l) => `- ${l.product.name} x${l.qty} (${formatPrice(l.subtotal, l.product.currency)})`)
           .join("\n");
-        return `Hola ${WHATSAPP_CONFIG.storeName}, quiero coordinar este pedido de demostraciÃ³n:\n${summary}\nTotal estimado: ${formatPrice(totalAmount, "Bs")}. Por favor indÃ­came disponibilidad y entrega.`;
+        return `Hola ${WHATSAPP_CONFIG.storeName}, quiero coordinar este pedido de demostraciÃƒÂ³n:\n${summary}\nTotal estimado: ${formatPrice(totalAmount, "Bs")}. Por favor indÃƒÂ­came disponibilidad y entrega.`;
       },
       afterSale: (saleRecord) => {
         const itemsTxt = Array.isArray(saleRecord.items)
           ? saleRecord.items.map((i) => `${i.name} x${i.qty}`).join(", ")
           : "productos seleccionados";
-        return `Hola ${WHATSAPP_CONFIG.storeName}, realicÃ© la compra de demostraciÃ³n #${saleRecord.id} (${itemsTxt}, total ${formatPrice(saleRecord.total, saleRecord.currency)}). Quisiera consultar disponibilidad, entrega y detalles del pedido.`;
+        return `Hola ${WHATSAPP_CONFIG.storeName}, realicÃƒÂ© la compra de demostraciÃƒÂ³n #${saleRecord.id} (${itemsTxt}, total ${formatPrice(saleRecord.total, saleRecord.currency)}). Quisiera consultar disponibilidad, entrega y detalles del pedido.`;
       }
     };
   }
@@ -71,11 +71,11 @@
         "featured":  false,
         "offer":  false,
         "published":  true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-vegeta-ed",
-        "name":  "Vegeta Edición Especial",
+        "name":  "Vegeta EdiciÃ³n Especial",
         "sku":  "JV-FIG-002",
         "categorySlug":  "anime-figuras",
         "price":  150,
@@ -88,7 +88,7 @@
         "featured":  false,
         "offer":  false,
         "published":  true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-majin",
@@ -105,7 +105,7 @@
         "featured":  false,
         "offer":  false,
         "published":  true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-gohan-ssj",
@@ -122,11 +122,11 @@
         "featured":  false,
         "offer":  false,
         "published":  true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-bills",
-        "name":  "Bills Dios de Destrucción",
+        "name":  "Bills Dios de DestrucciÃ³n",
         "sku":  "JV-FIG-005",
         "categorySlug":  "anime-figuras",
         "price":  0,
@@ -139,7 +139,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-gohan-bestia",
@@ -156,11 +156,11 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-goku-black",
-        "name":  "Goku Black Rosé",
+        "name":  "Goku Black RosÃ©",
         "sku":  "JV-FIG-007",
         "categorySlug":  "anime-figuras",
         "price":  0,
@@ -173,7 +173,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-goku-blue",
@@ -190,7 +190,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-luffy",
@@ -207,7 +207,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "fig-trunks",
@@ -224,11 +224,11 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-audifono",
-        "name":  "Audífono Gamer Rowell RW-A6 Azul",
+        "name":  "AudÃ­fono Gamer Rowell RW-A6 Azul",
         "sku":  "JV-TEC-011",
         "categorySlug":  "accesorios",
         "price":  0,
@@ -241,7 +241,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-cable-a005",
@@ -258,7 +258,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-cable-c25",
@@ -275,7 +275,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-cable-su",
@@ -292,7 +292,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-cable-f",
@@ -309,7 +309,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-cable-samsung",
@@ -326,7 +326,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-cable-starksun",
@@ -343,7 +343,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-cargador25",
@@ -352,7 +352,7 @@
         "categorySlug":  "tecnologia",
         "price":  0,
         "image":  "assets/img/productos/cargador-samsung-25w-s21-5g.jpg",
-        "categoryLabel":  "TECNOLOGÍA",
+        "categoryLabel":  "TECNOLOGÃA",
         "currency":  "Bs",
         "stock":  0,
         "status":  "Activo",
@@ -360,7 +360,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-cargador50",
@@ -369,7 +369,7 @@
         "categorySlug":  "tecnologia",
         "price":  0,
         "image":  "assets/img/productos/cargador-samsung-50w-original.jpg",
-        "categoryLabel":  "TECNOLOGÍA",
+        "categoryLabel":  "TECNOLOGÃA",
         "currency":  "Bs",
         "stock":  0,
         "status":  "Activo",
@@ -377,7 +377,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     },
     {
         "id":  "tec-tablet",
@@ -386,7 +386,7 @@
         "categorySlug":  "tecnologia",
         "price":  0,
         "image":  "assets/img/productos/combo-tablet-bossney-s003.jpg",
-        "categoryLabel":  "TECNOLOGÍA",
+        "categoryLabel":  "TECNOLOGÃA",
         "currency":  "Bs",
         "stock":  0,
         "status":  "Activo",
@@ -394,7 +394,7 @@
         "featured":  false,
         "offer":  false,
         "published": true,
-        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus características y disponibilidad."
+        "description":  "Producto disponible en JVMA Tech \u0026 Gaming. Consulta sus caracterÃ­sticas y disponibilidad."
     }
 ];
 
@@ -425,7 +425,7 @@
       id: safeId,
       sku: String(prod.sku || fallbackSku),
       name: String(prod.name || "Producto sin nombre"),
-      categoryLabel: String(prod.categoryLabel || "TECNOLOGÃA"),
+      categoryLabel: String(prod.categoryLabel || "TECNOLOGÃƒÂA"),
       categorySlug: String(prod.categorySlug || "tecnologia"),
       price: Number(prod.price) || 0,
       currency: String(prod.currency || "Bs"),
@@ -436,7 +436,7 @@
       offer: Boolean(prod.offer),
       published: prod.published !== false,
       image: String(prod.image || ""),
-      placeholderLabel: String(prod.placeholderLabel || "VISTA PREVIA Â· MARKER"),
+      placeholderLabel: String(prod.placeholderLabel || "VISTA PREVIA Ã‚Â· MARKER"),
       placeholderFile: String(prod.placeholderFile || "./assets/img/producto.png"),
       description: String(prod.description || "")
     };
@@ -480,7 +480,7 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify(migratedState));
       return migratedState;
     } catch (_err) {
-      console.error("ERROR EN LA MIGRACIÓN JVMA:", _err);
+      console.error("ERROR EN LA MIGRACIÃ“N JVMA:", _err);
       return createInitialState();
     }
   }
@@ -489,7 +489,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch (_err) {
-      // Sin bloqueo si el almacenamiento estÃ¡ restringido
+      // Sin bloqueo si el almacenamiento estÃƒÂ¡ restringido
     }
   }
 
@@ -528,7 +528,7 @@
     return resolveUrl(normalized);
   }
 
-  /* IntegraciÃ³n discreta en footer y secciÃ³n de contacto de inicio */
+  /* IntegraciÃƒÂ³n discreta en footer y secciÃƒÂ³n de contacto de inicio */
   function initGlobalWhatsAppLinks() {
     const msgs = getWhatsAppMessages();
     const generalUrl = buildWhatsAppUrl(msgs.general);
@@ -571,7 +571,7 @@
         box.innerHTML = `
           <div>
             <strong style="display:block;font-size:12px;">Contacto directo por WhatsApp</strong>
-            <span style="font-size:11px;color:var(--color-gray);">Consultas, disponibilidad y coordinaciÃ³n de entregas (${WHATSAPP_CONFIG.phoneDisplay}).</span>
+            <span style="font-size:11px;color:var(--color-gray);">Consultas, disponibilidad y coordinaciÃƒÂ³n de entregas (${WHATSAPP_CONFIG.phoneDisplay}).</span>
           </div>
           <a class="wa-inline-link" href="${generalUrl}" target="_blank" rel="noopener noreferrer">
             Consultar por WhatsApp -&gt;
@@ -647,7 +647,7 @@
       const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
       if (!isValid) {
-        feedback.textContent = "Ingresa un correo electrÃ³nico vÃ¡lido para recibir los drops.";
+        feedback.textContent = "Ingresa un correo electrÃƒÂ³nico vÃƒÂ¡lido para recibir los drops.";
         input.focus();
         return;
       }
@@ -656,7 +656,7 @@
         state.subscribers.push(email);
         saveState(state);
       }
-      feedback.textContent = `Listo: ${email} quedÃ³ registrado para prÃ³ximos drops y ofertas.`;
+      feedback.textContent = `Listo: ${email} quedÃƒÂ³ registrado para prÃƒÂ³ximos drops y ofertas.`;
       form.reset();
     });
   }
@@ -713,11 +713,11 @@
             JSON.stringify({ user: OWNER_USER, authenticatedAt: new Date().toISOString() })
           );
         } catch (_err) {
-          // Continuar con redirecciÃ³n acadÃ©mica
+          // Continuar con redirecciÃƒÂ³n acadÃƒÂ©mica
         }
         window.location.href = adminTarget;
       } else {
-        errorEl.textContent = "Usuario o contraseÃ±a incorrectos.";
+        errorEl.textContent = "Usuario o contraseÃƒÂ±a incorrectos.";
       }
     });
   }
@@ -791,7 +791,7 @@
       category: initialCategory,
       query: initialQuery,
       maxPrice: maxPriceRange ? Number(maxPriceRange.value) || 6000 : 6000,
-      onlyStock: onlyStockCheck ? Boolean(onlyStockCheck.checked) : true,
+      onlyStock: onlyStockCheck ? Boolean(onlyStockCheck.checked) : false,
       onlyOffers: initialOffer,
       sort: sortSelect ? sortSelect.value : "featured"
     };
@@ -860,7 +860,7 @@
         gridEl.innerHTML = `
           <div class="catalog-empty">
             <h2 class="catalog-empty__title">No encontramos productos con esos filtros</h2>
-            <p class="catalog-empty__desc">Prueba limpiando los filtros o buscando otro tÃ©rmino en el catÃ¡logo.</p>
+            <p class="catalog-empty__desc">Prueba limpiando los filtros o buscando otro tÃƒÂ©rmino en el catÃƒÂ¡logo.</p>
             <button class="btn btn--primary" id="catalog-empty-reset" type="button">Restablecer filtros</button>
           </div>
         `;
@@ -879,7 +879,7 @@
           const prodWaHref = buildWhatsAppUrl(msgs.product(prod));
           const imgSrc = prod.image ? resolveUrl(prod.image) : "";
           const badge = prod.offer ? `<span class="catalog-card__badge">Oferta</span>` : "";
-          const stockText = prod.stock > 0 ? `En stock (${prod.stock})` : "Agotado";
+          const stockText = prod.stock > 0 ? `En stock (${prod.stock})` : "Consultar disponibilidad";
           const stockClass = prod.stock > 0 ? "catalog-card__stock" : "catalog-card__stock is-out";
 
           const mediaContent = imgSrc
@@ -908,9 +908,9 @@
                   class="catalog-card__add-btn"
                   type="button"
                   data-add-to-cart="${prod.id}"
-                  ${prod.stock <= 0 ? "disabled" : ""}
+                  
                 >
-                  ${prod.stock > 0 ? "Agregar al carrito" : "Sin stock"}
+                  ${prod.stock > 0 ? "Agregar al carrito" : "Consultar disponibilidad"}
                 </button>
                 <a class="wa-inline-link" href="${prodWaHref}" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;margin-top:8px;">
                   Consultar WhatsApp
@@ -938,7 +938,7 @@
               btn.classList.remove("is-added");
             }, 1100);
           } else if (result.reason === "limite-stock") {
-            btn.textContent = "Stock mÃ¡ximo alcanzado";
+            btn.textContent = "Stock mÃƒÂ¡ximo alcanzado";
             window.setTimeout(() => {
               btn.textContent = "Agregar al carrito";
             }, 1200);
@@ -994,14 +994,14 @@
         filters.category = "todos";
         filters.query = "";
         filters.maxPrice = 6000;
-        filters.onlyStock = true;
+        filters.onlyStock = false;
         filters.onlyOffers = false;
         filters.sort = "featured";
 
         if (searchInput) searchInput.value = "";
         if (headerSearchInput) headerSearchInput.value = "";
         if (maxPriceRange) maxPriceRange.value = "6000";
-        if (onlyStockCheck) onlyStockCheck.checked = true;
+        if (onlyStockCheck) onlyStockCheck.checked = false;
         if (onlyOffersCheck) onlyOffersCheck.checked = false;
         if (sortSelect) sortSelect.value = "featured";
 
@@ -1026,7 +1026,7 @@
 
     if (!product) return;
 
-    document.title = `${product.name} â€” JVMA TECH & GAMING`;
+    document.title = `${product.name} Ã¢â‚¬â€ JVMA TECH & GAMING`;
 
     const breadcrumbCat = document.getElementById("breadcrumb-category");
     const breadcrumbProd = document.getElementById("breadcrumb-product");
@@ -1060,10 +1060,10 @@
       addBtn.parentElement.appendChild(waBtn);
     }
 
-    if (catEl) catEl.textContent = `JVMA Â· ${product.categoryLabel}`;
+    if (catEl) catEl.textContent = `JVMA Ã‚Â· ${product.categoryLabel}`;
     if (titleEl) titleEl.textContent = product.name;
     if (subtitleEl) {
-      subtitleEl.textContent = `CategorÃ­a: ${product.categoryLabel} Â· Disponible en JVMA TECH & GAMING`;
+      subtitleEl.textContent = `CategorÃƒÂ­a: ${product.categoryLabel} Ã‚Â· Disponible en JVMA TECH & GAMING`;
     }
 
     const regularPrice = product.offer ? Math.round(product.price * 1.15) : 0;
@@ -1083,15 +1083,15 @@
     const hasStock = product.stock > 0;
     if (stockEl) {
       stockEl.textContent = hasStock
-        ? `Disponible Â· ${product.stock} ${product.stock === 1 ? "unidad en stock" : "unidades en stock"}`
-        : "Agotado Â· Sin stock disponible";
+        ? `Disponible Ã‚Â· ${product.stock} ${product.stock === 1 ? "unidad en stock" : "unidades en stock"}`
+        : "Agotado Ã‚Â· Sin stock disponible";
       stockEl.classList.toggle("is-out", !hasStock);
     }
 
     if (descEl) {
       descEl.textContent =
         product.description ||
-        "Producto seleccionado de JVMA TECH & GAMING para gaming, tecnologÃ­a y colecciÃ³n.";
+        "Producto seleccionado de JVMA TECH & GAMING para gaming, tecnologÃƒÂ­a y colecciÃƒÂ³n.";
     }
 
     const imgSrc = product.image ? resolveUrl(product.image) : "";
@@ -1103,7 +1103,7 @@
       if (imgSrc) {
         mainMediaEl.innerHTML = `${badgeHtml}<img class="product-card__img" src="${imgSrc}" alt="${product.name}" />`;
       } else {
-        const suffix = mode === "detalle" ? " Â· VISTA 2" : " Â· VISTA PRINCIPAL";
+        const suffix = mode === "detalle" ? " Ã‚Â· VISTA 2" : " Ã‚Â· VISTA PRINCIPAL";
         mainMediaEl.innerHTML = `
           ${badgeHtml}
           <span class="detail-placeholder-title">${product.placeholderLabel}${suffix}</span>
@@ -1116,8 +1116,8 @@
 
     if (thumbsEl) {
       thumbsEl.innerHTML = `
-        <button class="detail-thumb-btn is-active" type="button" data-view="principal">Vista 1 Â· Principal</button>
-        <button class="detail-thumb-btn" type="button" data-view="detalle">Vista 2 Â· Detalle</button>
+        <button class="detail-thumb-btn is-active" type="button" data-view="principal">Vista 1 Ã‚Â· Principal</button>
+        <button class="detail-thumb-btn" type="button" data-view="detalle">Vista 2 Ã‚Â· Detalle</button>
       `;
       thumbsEl.querySelectorAll(".detail-thumb-btn").forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -1144,7 +1144,7 @@
       if (val > product.stock) {
         val = product.stock;
         if (feedbackEl) {
-          feedbackEl.textContent = `Cantidad ajustada al stock mÃ¡ximo disponible (${product.stock}).`;
+          feedbackEl.textContent = `Cantidad ajustada al stock mÃƒÂ¡ximo disponible (${product.stock}).`;
           feedbackEl.classList.add("is-error");
         }
       }
@@ -1197,14 +1197,14 @@
         if (result.ok) {
           if (feedbackEl) {
             feedbackEl.classList.remove("is-error");
-            feedbackEl.innerHTML = `Se ${chosenQty === 1 ? "agregÃ³ 1 unidad" : `agregaron ${chosenQty} unidades`} de <strong>${product.name}</strong> al carrito. <a href="./carrito.html" style="text-decoration:underline;">Ir al carrito</a>`;
+            feedbackEl.innerHTML = `Se ${chosenQty === 1 ? "agregÃƒÂ³ 1 unidad" : `agregaron ${chosenQty} unidades`} de <strong>${product.name}</strong> al carrito. <a href="./carrito.html" style="text-decoration:underline;">Ir al carrito</a>`;
           }
         } else if (result.reason === "limite-stock" && feedbackEl) {
           feedbackEl.classList.add("is-error");
           feedbackEl.textContent =
             result.maxAvailable > 0
-              ? `No puedes superar el stock disponible. Puedes agregar hasta ${result.maxAvailable} ${result.maxAvailable === 1 ? "unidad mÃ¡s" : "unidades mÃ¡s"}.`
-              : "Ya alcanzaste el stock mÃ¡ximo disponible de este producto en tu carrito.";
+              ? `No puedes superar el stock disponible. Puedes agregar hasta ${result.maxAvailable} ${result.maxAvailable === 1 ? "unidad mÃƒÂ¡s" : "unidades mÃƒÂ¡s"}.`
+              : "Ya alcanzaste el stock mÃƒÂ¡ximo disponible de este producto en tu carrito.";
         }
       });
     }
@@ -1314,9 +1314,9 @@
       if (lines.length === 0) {
         listEl.innerHTML = `
           <div class="cart-empty-box">
-            <h2 class="cart-empty-box__title">Tu carrito estÃ¡ vacÃ­o</h2>
-            <p class="cart-empty-box__desc">Explora el catÃ¡logo o revisa el detalle de un producto para agregar artÃ­culos.</p>
-            <a class="btn btn--primary" href="./catalogo.html">Ir al catÃ¡logo <span aria-hidden="true">-&gt;</span></a>
+            <h2 class="cart-empty-box__title">Tu carrito estÃƒÂ¡ vacÃƒÂ­o</h2>
+            <p class="cart-empty-box__desc">Explora el catÃƒÂ¡logo o revisa el detalle de un producto para agregar artÃƒÂ­culos.</p>
+            <a class="btn btn--primary" href="./catalogo.html">Ir al catÃƒÂ¡logo <span aria-hidden="true">-&gt;</span></a>
           </div>
         `;
         return;
@@ -1344,7 +1344,7 @@
 
               <div>
                 <h3 class="cart-item-title"><a href="${detailHref}">${product.name}</a></h3>
-                <p class="cart-item-meta">${product.categoryLabel} Â· Unitario: ${formatPrice(product.price, product.currency)}</p>
+                <p class="cart-item-meta">${product.categoryLabel} Ã‚Â· Unitario: ${formatPrice(product.price, product.currency)}</p>
                 <p class="cart-item-stock ${exceedsStock || product.stock <= 0 ? "is-warn" : ""}">${stockText}</p>
                 <button class="cart-item-remove" type="button" data-remove-item="${product.id}">Eliminar</button>
               </div>
@@ -1352,7 +1352,7 @@
               <div class="cart-item-right">
                 <span class="cart-item-subtotal">${formatPrice(subtotal, product.currency)}</span>
                 <div class="qty-stepper" aria-label="Cantidad de ${product.name}">
-                  <button class="qty-stepper__btn" type="button" data-cart-dec="${product.id}" aria-label="Disminuir cantidad">âˆ’</button>
+                  <button class="qty-stepper__btn" type="button" data-cart-dec="${product.id}" aria-label="Disminuir cantidad">Ã¢Ë†â€™</button>
                   <input
                     class="qty-stepper__input"
                     type="number"
@@ -1364,7 +1364,7 @@
                   />
                   <button class="qty-stepper__btn" type="button" data-cart-inc="${product.id}" aria-label="Aumentar cantidad">+</button>
                 </div>
-                <span class="cart-item-unit">${qty} Ã— ${formatPrice(product.price, product.currency)}</span>
+                <span class="cart-item-unit">${qty} Ãƒâ€” ${formatPrice(product.price, product.currency)}</span>
               </div>
             </article>
           `;
@@ -1395,7 +1395,7 @@
           if (!entry || !prod) return;
 
           if (entry.qty + 1 > prod.stock) {
-            setFeedback(`No hay mÃ¡s stock disponible para "${prod.name}" (mÃ¡ximo: ${prod.stock}).`);
+            setFeedback(`No hay mÃƒÂ¡s stock disponible para "${prod.name}" (mÃƒÂ¡ximo: ${prod.stock}).`);
             return;
           }
           setFeedback("");
@@ -1450,7 +1450,7 @@
     checkoutBtn.addEventListener("click", () => {
       const lines = getResolvedCartLines();
       if (lines.length === 0) {
-        setFeedback("Tu carrito estÃ¡ vacÃ­o. Agrega productos antes de finalizar la compra.");
+        setFeedback("Tu carrito estÃƒÂ¡ vacÃƒÂ­o. Agrega productos antes de finalizar la compra.");
         return;
       }
 
@@ -1487,7 +1487,7 @@
         id: `JV-${Date.now().toString().slice(-6)}`,
         date: new Date().toISOString(),
         status: "Completada",
-        mode: "DEMOSTRACIÃ“N ACADÃ‰MICA",
+        mode: "DEMOSTRACIÃƒâ€œN ACADÃƒâ€°MICA",
         items: saleItems,
         total: saleTotal,
         currency: "Bs"
@@ -1502,8 +1502,8 @@
         const afterSaleUrl = buildWhatsAppUrl(msgs.afterSale(saleRecord));
         saleBannerEl.hidden = false;
         saleBannerEl.innerHTML = `
-          <strong>Compra de demostraciÃ³n registrada (${saleRecord.id})</strong> â€” Total: <strong>${formatPrice(saleRecord.total, saleRecord.currency)}</strong>.
-          Se descontaron las unidades del inventario y se guardÃ³ en el historial demo.
+          <strong>Compra de demostraciÃƒÂ³n registrada (${saleRecord.id})</strong> Ã¢â‚¬â€ Total: <strong>${formatPrice(saleRecord.total, saleRecord.currency)}</strong>.
+          Se descontaron las unidades del inventario y se guardÃƒÂ³ en el historial demo.
           <a href="${afterSaleUrl}" target="_blank" rel="noopener noreferrer" style="margin-left:8px; font-weight:700; text-decoration:underline;">Consultar disponibilidad y entrega por WhatsApp</a>
           <a href="./admin.html?login=1" style="margin-left:8px; font-weight:700; text-decoration:underline;">Ver ventas en panel</a>
         `;
@@ -1529,11 +1529,11 @@
   function categorySlugToLabel(slug) {
     const map = {
       videojuegos: "VIDEOJUEGOS",
-      tecnologia: "TECNOLOGÃA",
+      tecnologia: "TECNOLOGÃƒÂA",
       accesorios: "ACCESORIOS",
       "anime-figuras": "ANIME & FIGURAS"
     };
-    return map[slug] || "TECNOLOGÃA";
+    return map[slug] || "TECNOLOGÃƒÂA";
   }
 
   function initAdminPage(state) {
@@ -1563,7 +1563,7 @@
           gateError.textContent = "";
           syncAuth();
         } else {
-          gateError.textContent = "Usuario o contraseÃ±a incorrectos.";
+          gateError.textContent = "Usuario o contraseÃƒÂ±a incorrectos.";
         }
       });
     }
@@ -1676,7 +1676,7 @@
         const isOut = p.stock <= 0;
         const isLow = !isOut && p.stock <= LOW_STOCK_THRESHOLD;
         const rowCls = isOut ? "is-out-row" : isLow ? "is-low-row" : "";
-        const availLbl = isOut ? "Agotado" : isLow ? "Stock bajo Â· Disponible" : "Disponible";
+        const availLbl = isOut ? "Agotado" : isLow ? "Stock bajo Ã‚Â· Disponible" : "Disponible";
         const pillCls = isOut ? "inv-status-pill--out" : isLow ? "inv-status-pill--low" : "inv-status-pill--ok";
         const pubLbl = p.published === false ? "Oculto" : "Publicado";
 
@@ -1764,7 +1764,7 @@
       const avg = opsCount > 0 ? Math.round(totalAmount / opsCount) : 0;
 
       if (salesIncomeEl) salesIncomeEl.textContent = formatPrice(totalAmount, "Bs");
-      if (salesIncomeSubEl) salesIncomeSubEl.textContent = `${opsCount} ${opsCount === 1 ? "operaciÃ³n registrada" : "operaciones registradas"}`;
+      if (salesIncomeSubEl) salesIncomeSubEl.textContent = `${opsCount} ${opsCount === 1 ? "operaciÃƒÂ³n registrada" : "operaciones registradas"}`;
       if (salesTotalAmtEl) salesTotalAmtEl.textContent = formatPrice(totalAmount, "Bs");
       if (salesOpsEl) salesOpsEl.textContent = String(opsCount);
       if (salesUnitsEl) salesUnitsEl.textContent = `${totalUnits} ${totalUnits === 1 ? "unidad vendida" : "unidades vendidas"}`;
@@ -1799,7 +1799,7 @@
         salesTbodyEl.innerHTML = `
           <tr>
             <td colspan="5" style="text-align:center;padding:24px;color:var(--color-gray);">
-              No hay compras de demostraciÃ³n registradas aÃºn. Finaliza una compra desde el carrito para verla aquÃ­.
+              No hay compras de demostraciÃƒÂ³n registradas aÃƒÂºn. Finaliza una compra desde el carrito para verla aquÃƒÂ­.
             </td>
           </tr>
         `;
@@ -1816,8 +1816,8 @@
             : "sales-badge--ok";
 
         const itemsHtml = Array.isArray(sale.items) && sale.items.length > 0
-          ? sale.items.map((it) => `${it.name} <strong>(Ã—${it.qty})</strong>`).join(" Â· ")
-          : "Sin detalle de Ã­tems";
+          ? sale.items.map((it) => `${it.name} <strong>(Ãƒâ€”${it.qty})</strong>`).join(" Ã‚Â· ")
+          : "Sin detalle de ÃƒÂ­tems";
 
         return `
           <tr>
@@ -1884,7 +1884,7 @@
       if (prevTitle) prevTitle.textContent = nameVal;
       if (prevPrice) prevPrice.textContent = formatPrice(priceVal, "Bs");
       if (prevStock) {
-        prevStock.textContent = `Stock: ${stockVal} ${stockVal === 1 ? "unidad" : "unidades"} Â· ${pubVal ? "Visible en catÃ¡logo" : "Oculto"}`;
+        prevStock.textContent = `Stock: ${stockVal} ${stockVal === 1 ? "unidad" : "unidades"} Ã‚Â· ${pubVal ? "Visible en catÃƒÂ¡logo" : "Oculto"}`;
       }
     }
 
@@ -2039,7 +2039,7 @@
             saveState(state);
             renderInvFn();
             renderFeaturedProducts(state);
-            if (regFeedback) regFeedback.textContent = `Cambios guardados en "${nameVal}" y sincronizados con el catÃ¡logo.`;
+            if (regFeedback) regFeedback.textContent = `Cambios guardados en "${nameVal}" y sincronizados con el catÃƒÂ¡logo.`;
           }
         } else {
           const slugBase = nameVal
@@ -2064,7 +2064,7 @@
               offer: isOffer,
               published: pubVal,
               image: imgVal,
-              placeholderLabel: `${catLbl} Â· JVMA`,
+              placeholderLabel: `${catLbl} Ã‚Â· JVMA`,
               placeholderFile: "../assets/img/producto.png"
             },
             state.products.length
@@ -2074,13 +2074,13 @@
           saveState(state);
           renderInvFn();
           renderFeaturedProducts(state);
-          if (regFeedback) regFeedback.textContent = `Producto "${nameVal}" registrado y sincronizado con inventario y catÃ¡logo.`;
+          if (regFeedback) regFeedback.textContent = `Producto "${nameVal}" registrado y sincronizado con inventario y catÃƒÂ¡logo.`;
           resetRegistroFormToNew();
         }
       });
     }
 
-    // Permitir abrir ediciÃ³n desde Inventario directamente o en panel rÃ¡pido
+    // Permitir abrir ediciÃƒÂ³n desde Inventario directamente o en panel rÃƒÂ¡pido
     if (typeof openEditInRegistroFn === "function" && tbody) {
       tbody.addEventListener("dblclick", (ev) => {
         const btn = ev.target.closest("[data-inv-edit]");
@@ -2108,6 +2108,7 @@
     initAdminPage(state);
   });
 })();
+
 
 
 
