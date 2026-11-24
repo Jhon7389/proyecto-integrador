@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    JVMA TECH & GAMING â€” Estado Compartido (localStorage) y LÃ³gica de Vistas
    ========================================================================== */
 
@@ -900,7 +900,7 @@
                     <span class="${stockClass}">${stockText}</span>
                   </div>
                   <h2 class="catalog-card__title">${prod.name}</h2>
-                  <p class="catalog-card__price">${formatPrice(prod.price, prod.currency)}</p>
+                  <p class="catalog-card__price">${(prod.price > 0 ? formatPrice(prod.price, prod.currency) : "Consultar precio")}</p>
                 </div>
               </a>
               <div class="catalog-card__footer">
