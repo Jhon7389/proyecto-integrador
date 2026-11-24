@@ -480,6 +480,7 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify(migratedState));
       return migratedState;
     } catch (_err) {
+      console.error("ERROR EN LA MIGRACIÓN JVMA:", _err);
       return createInitialState();
     }
   }
@@ -2107,5 +2108,6 @@
     initAdminPage(state);
   });
 })();
+
 
 
